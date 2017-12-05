@@ -5,7 +5,7 @@ app.controller("AuthCtrl", function($location, $rootScope, $scope, AuthService){
 		AuthService.authenticateGoogle().then((result) => {
 			$rootScope.uid = result.user.uid;
 			$scope.$apply(() => {
-				$location.url('/search');
+				$location.url('/auth');
 			});
 			
 		}).catch((err) => {
