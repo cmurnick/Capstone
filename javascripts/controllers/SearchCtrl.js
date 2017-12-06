@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("SearchCtrl", function($scope, EdamamService) {
+app.controller("SearchCtrl", function($location, $rootScope, $scope, RecipeService, EdamamService) {
 	$scope.recipes = [];
 
 	$scope.enterPush = (event) => {
@@ -16,4 +16,6 @@ app.controller("SearchCtrl", function($scope, EdamamService) {
 			});
 			}
 		};
+
+
 });
