@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("SearchCtrl", function($location, $rootScope, $scope, RecipeService, EdamamService) {
+app.controller("SearchCtrl", function($location, $rootScope, $scope, $window, RecipeService, EdamamService) {
 	$scope.recipes = [];
 
 	$scope.enterPush = (event) => {
@@ -25,5 +25,10 @@ $scope.saveFavorite= (edRecipe) => {
 			console.log("error in postNewRecipe", err);
 		});
 		};
+
+$scope.viewLink = (url) =>{
+	console.log("url",url);
+    $window.open(url,'_blank');
+};
 
 });
