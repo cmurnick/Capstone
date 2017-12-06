@@ -5,17 +5,25 @@ app.controller("SearchCtrl", function($location, $rootScope, $scope, RecipeServi
 
 	$scope.enterPush = (event) => {
 			if(event.keyCode === 13) {
-				console.log("event", event);
 				EdamamService.searchRecipes(event.target.value).then((results) =>{
-					console.log("results pull?", results);
+					console.log("overall Vegan", results);
 					$scope.recipes = results.data.hits;
-				console.log("scope results", $scope.recipes);
-				console.log("recipes?", results.data.hits);
 			}).catch((err) => {
 				console.log("error in searchMovies", err);
 			});
 			}
 		};
 
+$scope.saveFavorite= (edRecipe) => {
+		edRecipe.uid = $rootScope.uid;
+		edRecipe.isFavorite = true;
+    edRecipe.onMenu= false;
+		let newRecipe = RecipeService.createRecipeObject(edRecipe);
+		RecipeService.postNewRecipe(newRecipe).then (() => {
+			$location.path('/search');
+		}).catch((err) => {
+			console.log("error in postNewRecipe", err);
+		});
+		};
 
 });
