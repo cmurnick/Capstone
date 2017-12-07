@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("FavoriteCtrl", function($location, $rootScope, $scope, RecipeService){
+app.controller("FavoriteCtrl", function($location, $rootScope, $scope, $window, RecipeService){
   $scope.controller = "FavoriteCtrl";
 
   const getRecipes = () => {
@@ -25,6 +25,7 @@ app.controller("FavoriteCtrl", function($location, $rootScope, $scope, RecipeSer
 			});	
 		};
 
+
 	$scope.deleteRecipe = (recipeId) => {
 			RecipeService.deleteRecipe(recipeId).then((result) => {
 				getRecipes();
@@ -32,4 +33,11 @@ app.controller("FavoriteCtrl", function($location, $rootScope, $scope, RecipeSer
 				console.log("error in DeleteRecipe", err);
 			});
 		};
+
+	$scope.viewLink = (url) => {
+		console.log("url", url);
+	    $window.open(url,'_blank');
+	};
+	
+
 });

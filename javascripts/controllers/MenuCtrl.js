@@ -19,6 +19,7 @@ app.controller("MenuCtrl", function($rootScope, $scope, $window, RecipeService){
 
 	getRecipes();
 
+
   $scope.removeFromMenu = (recipe, recipeId) => {
 		recipe.onMenu = false;
 		let updatedRecipe = RecipeService.createRecipeObject(recipe);
@@ -39,6 +40,12 @@ app.controller("MenuCtrl", function($rootScope, $scope, $window, RecipeService){
 		});
 	};
 
+
+
+	$scope.viewLink = (url) =>{
+			console.log("url",url);
+		    $window.open(url,'_blank');
+		};
 
 
 });
