@@ -25,9 +25,19 @@ app.controller("FavoriteCtrl", function($location, $rootScope, $scope, $window, 
 			});	
 		};
 
+
+	$scope.deleteRecipe = (recipeId) => {
+			RecipeService.deleteRecipe(recipeId).then((result) => {
+				getRecipes();
+			}).catch((err) => {
+				console.log("error in DeleteRecipe", err);
+			});
+		};
+
 	$scope.viewLink = (url) => {
 		console.log("url", url);
 	    $window.open(url,'_blank');
 	};
 	
+
 });
