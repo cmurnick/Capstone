@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("FavoriteCtrl", function($location, $rootScope, $scope, RecipeService){
+app.controller("FavoriteCtrl", function($location, $rootScope, $scope, $window, RecipeService){
   $scope.controller = "FavoriteCtrl";
 
   const getRecipes = () => {
@@ -25,4 +25,9 @@ app.controller("FavoriteCtrl", function($location, $rootScope, $scope, RecipeSer
 			});	
 		};
 
+	$scope.viewLink = (url) => {
+		console.log("url", url);
+	    $window.open(url,'_blank');
+	};
+	
 });
