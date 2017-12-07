@@ -14,4 +14,15 @@ app.controller("FavoriteCtrl", function($location, $rootScope, $scope, RecipeSer
 
 	getRecipes();
 
+	$scope.addToMenu = (recipe) => {
+	    recipe.uid = $rootScope.uid;
+			recipe.onMenu = true;
+			let updatedRecipe = RecipeService.createRecipeObject(recipe);
+			RecipeService.updateRecipe(updatedRecipe, recipe.id).then((result) => {
+				
+			}).catch((err) => {
+				console.log("error in update movie", err);
+			});	
+		};
+
 });

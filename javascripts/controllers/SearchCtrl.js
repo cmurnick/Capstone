@@ -15,15 +15,27 @@ app.controller("SearchCtrl", function($location, $rootScope, $scope, $window, Re
 		};
 
 $scope.saveFavorite= (edRecipe) => {
-		edRecipe.uid = $rootScope.uid;
-		edRecipe.isFavorite = true;
-    edRecipe.onMenu= false;
-		let newRecipe = RecipeService.createRecipeObject(edRecipe);
+		edRecipe.recipe.uid = $rootScope.uid;
+		edRecipe.recipe.isFavorite = true;
+    edRecipe.recipe.onMenu= false;
+		let newRecipe = RecipeService.createRecipeObject(edRecipe.recipe);
 		RecipeService.postNewRecipe(newRecipe).then (() => {
 			$location.path('/search');
 		}).catch((err) => {
 			console.log("error in postNewRecipe", err);
 		});
+		};
+
+$scope.addToMenu = (recipe) => {
+	    recipe.recipe.uid = $rootScope.uid;
+	    recipe.recipe.isFavorite = false;
+			recipe.recipe.onMenu = true;
+			let newRecipe = RecipeService.createRecipeObject(recipe.recipe);
+			RecipeService.postNewRecipe(newRecipe).then (() => {
+				$location.path('/search');
+			}).catch((err) => {
+				console.log("error in update movie", err);
+			});	
 		};
 
 $scope.viewLink = (url) =>{
