@@ -62,7 +62,11 @@ app.service("RecipeService", function($http, $q, FIREBASE_CONFIG) {
 
 		};
 
-		return {getFavoriteRecipes, createRecipeObject, postNewRecipe, getOnMenu, updateRecipe};
+		const deleteRecipe= (recipeId) => {
+		return $http.delete(`${FIREBASE_CONFIG.databaseURL}/recipes/${recipeId}.json`);
+		};
+
+		return {getFavoriteRecipes, createRecipeObject, postNewRecipe, getOnMenu, updateRecipe, deleteRecipe};
 });
 
 

@@ -25,4 +25,11 @@ app.controller("FavoriteCtrl", function($location, $rootScope, $scope, RecipeSer
 			});	
 		};
 
+	$scope.deleteRecipe = (recipeId) => {
+			RecipeService.deleteRecipe(recipeId).then((result) => {
+				getRecipes();
+			}).catch((err) => {
+				console.log("error in DeleteRecipe", err);
+			});
+		};
 });
