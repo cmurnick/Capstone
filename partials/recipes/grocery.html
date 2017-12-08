@@ -1,1 +1,25 @@
-<div>groceries</div>
+<div class="text-center" id="grocery">
+<h1 class="mainHeader">Grocery List</h1>
+
+
+  <div id="recipes">
+
+      <div ng-repeat="recipe in recipes" class="col-sm-12 col-md-6 recipe">
+        <div class="thumbnail">      	
+              <div class="caption">
+                  <h3 class="title">{{recipe.label}}</h3>
+                  <div ng-repeat="i in recipe.ingredients">
+
+                    <div>{{i.ingredient}}</div>
+                  </div>
+
+                  <!-- <div ng-repeat="user in users"></div>
+                  <div ng-repeat="(id, user) in userMap"></div> -->
+                    
+              </div>
+
+       
+        </div>
+      </div>
+  </div>
+</div>
