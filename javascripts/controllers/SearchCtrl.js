@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("SearchCtrl", function($location, $rootScope, $scope, $window, RecipeService, EdamamService) {
+app.controller("SearchCtrl", function($location, $rootScope, $scope, $window, RecipeService, IngredientService,  EdamamService) {
 	$scope.recipes = [];
 
 	$scope.enterPush = (event) => {
@@ -14,17 +14,28 @@ app.controller("SearchCtrl", function($location, $rootScope, $scope, $window, Re
 			}
 		};
 
+
+
 $scope.saveFavorite= (edRecipe) => {
 		edRecipe.recipe.uid = $rootScope.uid;
 		edRecipe.recipe.isFavorite = true;
-    edRecipe.recipe.onMenu= false;
+   		edRecipe.recipe.onMenu= false;
 		let newRecipe = RecipeService.createRecipeObject(edRecipe.recipe);
-		RecipeService.postNewRecipe(newRecipe).then (() => {
-			$location.path('/search');
+		RecipeService.postNewRecipe(newRecipe).then((results) => {
+			console.log("saveFavoriteRecipe working from search?", results);
+			let ingredientsList = edRecipe.recipe.ingredientLines;
+			console.log("ingredientsList", edRecipe);
+			ingredientsList.forEach ((ingredient) => {
+				let newIngredient = {ingredient: ingredient, recipeId: results.data.name};
+				// console.log("ingredients posting too?", results.data);
+				IngredientService.postNewIngredient(newIngredient);
+			});
 		}).catch((err) => {
-			console.log("error in postNewRecipe", err);
+			console.log("error in saveFavorite", err);
 		});
-		};
+	};
+		
+
 
 $scope.addToMenu = (recipe) => {
 	    recipe.recipe.uid = $rootScope.uid;
