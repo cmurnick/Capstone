@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("SearchCtrl", function($location, $rootScope, $scope, $window, RecipeService, IngredientService,  EdamamService) {
+app.controller("SearchCtrl", function($location, $rootScope, $scope, $window, AuthService,  RecipeService, IngredientService,  EdamamService) {
 	$scope.recipes = [];
 
 	$scope.enterPush = (event) => {
@@ -17,7 +17,7 @@ app.controller("SearchCtrl", function($location, $rootScope, $scope, $window, Re
 
 
 	$scope.saveFavorite= (edRecipe) => {
-			edRecipe.recipe.uid = $rootScope.uid;
+			edRecipe.recipe.uid = AuthService.getCurrentUid();
 			edRecipe.recipe.isFavorite = true;
 	   		edRecipe.recipe.onMenu= false;
 			let newRecipe = RecipeService.createRecipeObject(edRecipe.recipe);
@@ -36,7 +36,7 @@ app.controller("SearchCtrl", function($location, $rootScope, $scope, $window, Re
 		};
 			
 	$scope.addToMenu= (edRecipe) => {
-			edRecipe.recipe.uid = $rootScope.uid;
+			edRecipe.recipe.uid = AuthService.getCurrentUid();
 			edRecipe.recipe.isFavorite = false;
 	   		edRecipe.recipe.onMenu= true;
 			let newRecipe = RecipeService.createRecipeObject(edRecipe.recipe);

@@ -1,10 +1,10 @@
 "use strict";
 
-app.controller("FavoriteCtrl", function($location, $rootScope, $scope, $window, RecipeService){
+app.controller("FavoriteCtrl", function($location, $rootScope, $scope, $window, AuthService, RecipeService){
   $scope.controller = "FavoriteCtrl";
 
   const getRecipes = () => {
-		RecipeService.getFavoriteRecipes($rootScope.uid).then((results) => {
+		RecipeService.getFavoriteRecipes(AuthService.getCurrentUid()).then((results) => {
 			console.log("get Recipes on Fav page:", results);
 		$scope.recipes = results;
 	}).catch((err) => {
@@ -15,7 +15,7 @@ app.controller("FavoriteCtrl", function($location, $rootScope, $scope, $window, 
 	getRecipes();
 
 	$scope.addToMenu = (recipe) => {
-	    recipe.uid = $rootScope.uid;
+	    recipe.uid = AuthService.getCurrentUid();
 			recipe.onMenu = true;
 			let updatedRecipe = RecipeService.createRecipeObject(recipe);
 			RecipeService.updateRecipe(updatedRecipe, recipe.id).then((result) => {

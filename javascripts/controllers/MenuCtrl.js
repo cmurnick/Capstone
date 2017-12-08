@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("MenuCtrl", function($rootScope, $scope, $window, RecipeService){
+app.controller("MenuCtrl", function($rootScope, $scope, $window, AuthService,  RecipeService){
   $scope.controller = "MenuCtrl";
 
 		$scope.viewLink = (url) =>{
@@ -9,7 +9,7 @@ app.controller("MenuCtrl", function($rootScope, $scope, $window, RecipeService){
 		};
 
 	const getRecipes = () => {
-		RecipeService.getOnMenu($rootScope.uid).then((results) => {
+		RecipeService.getOnMenu(AuthService.getCurrentUid()).then((results) => {
 			$scope.recipes = results;
 			console.log("results of get recipes", results);
 		}).catch((err) => {
