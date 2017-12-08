@@ -55,7 +55,7 @@ app.service("RecipeService", function($http, $q, FIREBASE_CONFIG) {
 
 		const postNewRecipe = (NewRecipe) => {
 		 	return $http.post(`${FIREBASE_CONFIG.databaseURL}/recipes.json`, JSON.stringify(NewRecipe));
-	};
+		};
 
 		const updateRecipe = (recipe, recipeId) => {
 			return $http.put(`${FIREBASE_CONFIG.databaseURL}/recipes/${recipeId}.json`, JSON.stringify(recipe));
