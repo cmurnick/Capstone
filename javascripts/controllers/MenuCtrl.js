@@ -1,7 +1,7 @@
 "use strict";
 
 app.controller("MenuCtrl", function($rootScope, $scope, $window, AuthService, IngredientService, RecipeService){
-  $scope.controller = "MenuCtrl";
+  $scope.recipes = [];
 
 		$scope.viewLink = (url) =>{
 			console.log("url",url);
@@ -42,6 +42,31 @@ app.controller("MenuCtrl", function($rootScope, $scope, $window, AuthService, In
 			getRecipes();	
 		};
 	
+	$scope.deleteAllRecipes = () => {
+		$scope.recipes.forEach((recipe) => {
+			if(recipe.isFavorite) {
+				recipe.onMenu = false;
+				let updatedRecipe = RecipeService.createRecipeObject(recipe);
+				RecipeService.updateRecipe(updatedRecipe, recipe.id).then((result) => {
+					getRecipes();
+				}).catch((err) => {
+					console.log("error in DeleteRecipe", err);
+				}); 
+				}	else {
+					RecipeService.deleteRecipe(recipe.id).then((results) => {
+						IngredientService.getIngredientsByRecipe(recipe.id).then((ingredients) => {
+							console.log("ingredient", ingredients);
+							ingredients.forEach((ingredient) => {
+								IngredientService.deleteIngredient(ingredient.id);
+							});
+						});
+					});
+				}
+
+		});
+		
+				getRecipes();	
+};
 
 	$scope.saveFavorite = (recipe, recipeId) => {
 		recipe.isFavorite = true;
