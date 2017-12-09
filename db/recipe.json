@@ -5,7 +5,7 @@
 				"label": "Baked Kale Chips",
 				"recipeURL": "https://smittenkitchen.com/2010/03/baked-kale-chips/",
 				"image": "https://www.edamam.com/web-img/d46/d4657664489f0474efe21f2496a3bdd4",
-				"isFavorite": false,
+				"isFavorite": true,
 				"onMenu": false,
 				"uid": "r6e8FDsXZWcKQOW0aroHO1oh5uf2"
 			},
@@ -46,7 +46,7 @@
 				"recipeURL": "http://www.101cookbooks.com/archives/maple-grilled-tempeh-recipe.html",
 				"image": "https://www.edamam.com/web-img/2b0/2b096abd705085aca2e5f0d35fbebf0c.jpg",
 				"isFavorite": false,
-				"onMenu": false,
+				"onMenu": true,
 				"uid": "r6e8FDsXZWcKQOW0aroHO1oh5uf2"
 			}
 		},

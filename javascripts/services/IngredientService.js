@@ -14,7 +14,7 @@ app.service("IngredientService", function($http, $q, FIREBASE_CONFIG) {
 			let fbIngredients = results.data;
 
 				Object.keys(fbIngredients).forEach((key) => {
-			
+					fbIngredients[key].id = key;
 				   ingredients.push(fbIngredients[key]);
 				 });
 				 resolve(ingredients);
@@ -25,5 +25,11 @@ app.service("IngredientService", function($http, $q, FIREBASE_CONFIG) {
 		});
    };
 
-	return {postNewIngredient, getIngredientsByRecipe};
+   	const deleteIngredient= (ingredientId) => {
+		return $http.delete(`${FIREBASE_CONFIG.databaseURL}/ingredients/${ingredientId}.json`);
+		};
+
+	
+
+	return {postNewIngredient, getIngredientsByRecipe, deleteIngredient};
 });
