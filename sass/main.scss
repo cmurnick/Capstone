@@ -1,12 +1,28 @@
 .tomato {
-	max-height: 50px;
-	max-width: 70px;
+	max-height: auto;
+	max-width: 125px;
 }
 
 //image on favorite page
 .favImage {
-	height: 228.88px;
-	width: 228.88px;
+	height: auto;
+	width: auto;
 	justify-content: center;
 	margin: 0px;
+}
+
+
+.navbar {
+	background: #dddddd;
+
+}
+
+//logo
+.navbar-brand {
+	padding: 5px;
+}
+
+.top {
+	color: black;
+	font-size: 18px;
 }
