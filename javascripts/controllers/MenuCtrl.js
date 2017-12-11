@@ -3,21 +3,28 @@
 app.controller("MenuCtrl", function($rootScope, $scope, $window, AuthService, IngredientService, RecipeService){
   $scope.recipes = [];
 
-		$scope.viewLink = (url) =>{
+	$scope.viewLink = (url) =>{
 			console.log("url",url);
 		    $window.open(url,'_blank');
 		};
 
-	const getRecipes = () => {
-		RecipeService.getOnMenu(AuthService.getCurrentUid()).then((results) => {
-			$scope.recipes = results;
-			console.log("results of get recipes", results);
-		}).catch((err) => {
-			console.log("error in getRecipes on MEnu", err);
-		});
-	};
+		const getRecipes = () => {
+		    RecipeService.getOnMenu(AuthService.getCurrentUid()).then((results) => {
+		        results.forEach((result) => {
+		            IngredientService.getIngredientsByRecipe(result.id).then ((ingredients) => {
+		                result.ingredients = ingredients;
+		            });
+		        });
+		        
+		        
+		        $scope.recipes = results;
+		    }).catch((err) => {
+		        console.log("error in getRecipes on MEnu", err);
+		    });
+		};
 
 	getRecipes();
+
 
 
   $scope.removeFromMenu = (recipe, recipeId) => {

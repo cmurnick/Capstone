@@ -1,0 +1,21 @@
+//brand logo
+.tomato {
+	max-height: auto;
+	max-width: 125px;
+}
+
+.navbar {
+	background: $navBackground;
+	border-bottom: 2px solid #e0e0e0;
+
+}
+
+//logo placement
+.navbar-brand {
+	padding: 5px;
+}
+
+.topNavBar {
+	color: $navWordColor;
+	font-size: 18px;
+}
