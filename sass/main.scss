@@ -1,28 +1,46 @@
-.tomato {
-	max-height: auto;
-	max-width: 125px;
+@import "variables";
+@import "favorite";
+@import "overall";
+@import "menu";
+@import "grocery";
+@import "nav";
+@import "search";
+
+
+.thumbnail {
+	background-color: $thumbnail;
+	-webkit-box-shadow: 3px 3px 13px -3px rgba(102,102,102,0.37);
+-moz-box-shadow: 3px 3px 13px -3px rgba(102,102,102,0.37);
+box-shadow: 3px 3px 13px -3px rgba(102,102,102,0.37);
 }
 
-//image on favorite page
-.favImage {
-	height: auto;
-	width: auto;
-	justify-content: center;
-	margin: 0px;
-}
+
+// //header and picture on grocery list page
+// .groceryCard {
+// 	margin-top: 0px;
+// }
+
+// .imageHeader{
+// 	margin-top: 0px;
+// 	float: left;
+// 	clear: right;
 
 
-.navbar {
-	background: #dddddd;
+// 	.groceryImage {
+// 			height: 75px;
+// 			width: auto;
+			
+// 	}	
+// }
 
-}
+// .groceryHolder {
 
-//logo
-.navbar-brand {
-	padding: 5px;
-}
+// }
+// .groceryTitle {
+// 		font-size: 20px;
+// 		margin-top: 0px;
+		
+// 		justify-content: right;
 
-.top {
-	color: black;
-	font-size: 18px;
-}
+// 			}
+

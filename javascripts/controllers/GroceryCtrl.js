@@ -21,4 +21,6 @@ app.controller("GroceryCtrl", function($rootScope, $scope, $window, AuthService,
 
 getRecipes();
 
+
+
 });

@@ -1,4 +1,4 @@
-<nav class="navbar " ng-controller="NavCtrl">
+<nav class="navbar navbar-fixed-top" ng-controller="NavCtrl">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -11,15 +11,15 @@
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="top nav navbar-nav navbar-right" ng-show="!navbar">
-        <li><a class="top" ng-href="#!/auth">Login</a></li>
+        <li><a class="topNavBar" ng-href="#!/auth">Login</a></li>
       </ul>
       <ul class = "top nav navbar-nav navbar-right"  ng-show="navbar">
-        <li><a class="top" ng-href="#!/search">Search</a></li>
-        <li><a class="top" ng-href="#!/favorite">Favorite</a></li>
-        <li><a class="top" ng-href="#!/menu">Menu</a></li>
-        <li><a class="top" ng-href="#!/grocery">Grocery List</a></li>
+        <li><a class="topNavBar" ng-href="#!/search">Search</a></li>
+        <li><a class="topNavBar" ng-href="#!/favorite">Favorite</a></li>
+        <li><a class="topNavBar" ng-href="#!/menu">Menu</a></li>
+        <li><a class="topNavBar" ng-href="#!/grocery">Grocery List</a></li>
 
-        <li><a class="top" ng-click="logoutUser()">Logout</a></li>
+        <li><a class="topNavBar" ng-click="logoutUser()">Logout</a></li>
       </ul>
     </div>
   </div>
