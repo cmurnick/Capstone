@@ -3,14 +3,13 @@
     <h1 class="mainHeader">My Favorites</h1>
   </div>
 
-  <div>
+  <div class="grid">
 
-    <div ng-repeat="recipe in recipes" class="col-sm-6 col-md-4 recipe">
-      <div class="thumbnail bottomStick">      	
+    <div ng-repeat="recipe in recipes" class="col-sm-6 col-md-4 recipe  grid-item">
+      <div class="thumbnail cardHeight bottomStick">      	
         	
-        		<img class="favImage" ng-src="{{recipe.image}}">
-        		<h1 class="title">{{recipe.label}}</h1>
-        <!-- 	<div class="bottomButtons"> -->
+      		<img class="favImage" ng-src="{{recipe.image}}">
+      		<h1 class="title">{{recipe.label}}</h1>
           <div class="menuButtonWrapper">
           	<a class="floatButton btn-sm delete text-center" role="button" ng-click="deleteRecipe(recipe.id)"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
          		<a class="floatButton btn-sm detail" role="button"><i class="fa fa-info-circle toDetails"  ng-click="viewLink(recipe.recipeURL)" aria-hidden="true"></i></a>

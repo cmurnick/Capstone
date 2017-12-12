@@ -44,6 +44,7 @@ app.controller("FavoriteCtrl", function ($location, $rootScope, $scope, $window,
 		$window.open(url, '_blank');
 	};
 
+	
 
 });
 
