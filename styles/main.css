@@ -80,13 +80,15 @@ body {
   flex-direction: row;
   overflow-x: auto;
   background-image: -webkit-linear-gradient(left, #C3FB94 60%, #F6F6F6 100%);
-  padding-top: 30px; }
+  padding-top: 30px;
+  border-radius: 5px; }
   .menuWrap .recipe {
     min-width: 480px; }
 
 .yellowList {
   background-color: #F9F6B3;
-  border-radius: 10px; }
+  border-radius: 10px;
+  float: right; }
   .yellowList .checkbox {
     margin-right: 5px; }
 
@@ -105,14 +107,12 @@ body {
 table, th, td {
   padding: 25px 5px 25px 5px; }
 
-#about-text {
-  width: 700px;
-  -webkit-column-count: 2;
-  -moz-column-count: 2;
-  column-count: 2;
-  -webkit-column-gap: 10px;
-  -moz-column-gap: 10px;
-  column-gap: 10px; }
+.home {
+  background-image: url("../images/foodPlate.jpg");
+  width: 50%;
+  position: absolute;
+  left: 0px;
+  height: 100%; }
 
 .tomato {
   max-height: auto;

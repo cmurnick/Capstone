@@ -3,16 +3,20 @@
     <h1 class="mainHeader">Grocery List</h1>
   </div>
     
-  <div class="col-sm-12 col-md-12 yellowList">
-    
+  
+  <div>
+  <div class="home col-md-6"></div>
+
+  <div class="col-sm-12 col-md-6 yellowList">
           <div ng-repeat="recipe in recipes">
 
             <div>
-            <div ng-repeat="i in recipe.ingredients"  ng-class="{strike: deleted}" class="overallGroceryIngredient"><input class="checkbox" type="checkbox" value="false" ng-click="haveIngredient(IngredientId)" ng-model="deleted">{{i.ingredient}}</div>
+            <div ng-repeat="i in recipe.ingredients"  ng-class="{strike: deleted}" class="overallGroceryIngredient"><input class="checkbox" type="checkbox" value="false" ng-click="haveIngredient(IngredientId)" ng-model="deleted">{{i.ingredient}}
+            </div>
             </div>
           </div>
         
-        
+   </div>     
   </div>
 </div>
 
