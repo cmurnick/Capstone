@@ -1,19 +1,21 @@
-<div class="text-center" id="rated">
-  <h1 class="mainHeader">My Favorites</h1>
- 
+<div>
+  <div class="text-center" id="rated">
+    <h1 class="mainHeader">My Favorites</h1>
+  </div>
 
-<div id="recipes">
+  <div>
 
-    <div ng-repeat="recipe in recipes" class="col-sm-6 col-md-3 recipe">
-      <div class="thumbnail">      	
-        	<div class="caption">
+    <div ng-repeat="recipe in recipes" class="col-sm-6 col-md-4 recipe">
+      <div class="thumbnail bottomStick">      	
+        	
         		<img class="favImage" ng-src="{{recipe.image}}">
         		<h1 class="title">{{recipe.label}}</h1>
-        	</div>
-        	<button class="floatButton btn-sm delete" role="button" ng-click="deleteRecipe(recipe.id)"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-       		<button class="floatButton btn-sm detail" role="button"><i class="fa fa-info-circle toDetails"  ng-click="viewLink(recipe.recipeURL)" aria-hidden="true"></i></button>
-       		<button class="floatButton btn-sm menu" role="button"><i class="fa fa-cutlery" ng-click="addToMenu(recipe)" aria-hidden="true"></i></button>
-     
+        <!-- 	<div class="bottomButtons"> -->
+          <div class="menuButtonWrapper">
+          	<a class="floatButton btn-sm delete text-center" role="button" ng-click="deleteRecipe(recipe.id)"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+         		<a class="floatButton btn-sm detail" role="button"><i class="fa fa-info-circle toDetails"  ng-click="viewLink(recipe.recipeURL)" aria-hidden="true"></i></a>
+         		<a class="floatButton btn-sm menu" role="button"><i class="fa fa-cutlery" ng-click="addToMenu(recipe)" aria-hidden="true"></i></a>
+          </div>
      </div>
     </div>
    </div>

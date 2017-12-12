@@ -4,63 +4,16 @@
   </div>
     
   <div class="col-sm-12 col-md-12 yellowList">
-    <table style="width:100%">
-      <!-- <tr>
-        <th class="overallGrocery text-center">Overall List</th>
-      </tr> -->
-      <tr>
-        <td>
-          <div ng-repeat="recipe in recipes" id="needtowrap">
-            <div ng-repeat="i in recipe.ingredients" ng-class="{strike: deleted}" class="overallGroceryIngredient"><input class="checkbox" type="checkbox" ng-model="deleted">{{i.ingredient}}</div>
+    
+          <div ng-repeat="recipe in recipes">
+
+            <div id="about-text">
+            <div ng-repeat="i in recipe.ingredients"  ng-class="{strike: deleted}" class="overallGroceryIngredient"><input class="checkbox" type="checkbox" ng-model="deleted">{{i.ingredient}}</div>
+            </div>
           </div>
-        </td>    
-      </tr>
-    </table>  
+        
+        
   </div>
 </div>
 
-  <!-- <div class="container col-sm-12 col-md-8 col-lg-8">
-    <div class="row">
-      <div ng-repeat="recipe in recipes" class="col-sm-12 col-md-12 recipe">
-        <div class="thumbnail ">
-            <div class="imageHeader"><img class="groceryImage" ng-src="{{recipe.image}}">
-                <h1 class="groceryTitle">{{recipe.label}}</h1>
-            </div>
-            <ul ng-repeat="i in recipe.ingredients" class="ingredientHolder" ng-class="{strike: deleted}">
-                  <li  class="groceryIngredient">
-                    <input class="checkbox" type="checkbox" ng-model="deleted">{{i.ingredient}}
-                  </li>
-            </ul>
-        </div>
-      </div>
-    </div>
-  </div>
- -->
-
-<!-- 
-
-
-  <div id="ingredients" class="">
-
-      <div ng-repeat="recipe in recipes" class="col-sm-12 col-md-6 recipe">
-          
-
-              <div class="caption groceryCard">
-                  <div class="imageHeader"><img class="groceryImage" ng-src="{{recipe.image}}">
-                    <h1 class="groceryTitle">{{recipe.label}}</h1>
-                  </div>
-                  <div ng-repeat="i in recipe.ingredients" class="ingredientHolder">
-                    <p>
-                        <label ng-class="{strike: deleted}" class="groceryIngredient">
-                          <input class="checkbox" type="checkbox" ng-model="deleted">{{i.ingredient}}
-                        </label>
-                    </p>  
-                  </div>
-              </div>
-
-       
-        </div>
-      </div>
-  </div>
-
-</div> -->
+  

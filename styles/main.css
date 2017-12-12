@@ -1,9 +1,3 @@
-.favImage {
-  height: 200px;
-  width: auto;
-  justify-content: center;
-  margin: 0px; }
-
 body {
   margin-top: 60px; }
 
@@ -12,9 +6,14 @@ body {
   margin-top: 10px;
   color: #898888; }
 
+.title {
+  font-size: 16px;
+  font-weight: bolder; }
+
 .groceryImage {
   width: 100px;
   float: right;
+  margin-left: 5px;
   margin-right: 5px; }
 
 .groceryTitle {
@@ -97,13 +96,14 @@ body {
 table, th, td {
   padding: 25px 5px 25px 5px; }
 
-#needtowrap {
-  -moz-column-count: 2;
-  -moz-column-gap: 20px;
+#about-text {
+  width: 700px;
   -webkit-column-count: 2;
-  -webkit-column-gap: 20px;
+  -moz-column-count: 2;
   column-count: 2;
-  column-gap: 20px; }
+  -webkit-column-gap: 10px;
+  -moz-column-gap: 10px;
+  column-gap: 10px; }
 
 .tomato {
   max-height: auto;
@@ -125,3 +125,16 @@ table, th, td {
   -webkit-box-shadow: 3px 3px 13px -3px rgba(102, 102, 102, 0.37);
   -moz-box-shadow: 3px 3px 13px -3px rgba(102, 102, 102, 0.37);
   box-shadow: 3px 3px 13px -3px rgba(102, 102, 102, 0.37); }
+
+.bottomStick {
+  padding-bottom: 7px; }
+
+.bg {
+  /* The image used */
+  background-image: url("../images/background.jpg");
+  /* Full height */
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
