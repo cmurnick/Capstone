@@ -79,9 +79,8 @@ body {
   display: flex;
   flex-direction: row;
   overflow-x: auto;
-  background-color: #C3FB94;
-  padding-top: 30px;
-  position: relative; }
+  background-image: -webkit-linear-gradient(left, #C3FB94 60%, #F6F6F6 100%);
+  padding-top: 30px; }
   .menuWrap .recipe {
     min-width: 480px; }
 

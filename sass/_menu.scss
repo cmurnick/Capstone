@@ -97,9 +97,9 @@
 	display: flex;
 	flex-direction: row;
 	overflow-x: auto;
-	background-color: $button;
+	background-image: -webkit-linear-gradient(left, #C3FB94 60%, #F6F6F6 100%);
 	padding-top: 30px;
-	position: relative;
+	// position: relative;
 
 	.recipe {
 		min-width: 480px;
