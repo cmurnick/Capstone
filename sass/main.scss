@@ -12,8 +12,32 @@
 	-webkit-box-shadow: 3px 3px 13px -3px rgba(102,102,102,0.37);
 -moz-box-shadow: 3px 3px 13px -3px rgba(102,102,102,0.37);
 box-shadow: 3px 3px 13px -3px rgba(102,102,102,0.37);
+
+
 }
 
+//thumbnails on search and favorite
+.bottomStick {
+	padding-bottom: 7px;
+}
+
+// body, html {
+//     height: 100%;
+//     margin: 0;
+// }
+
+.bg {
+    /* The image used */
+    background-image: url("../images/background.jpg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 // //header and picture on grocery list page
 // .groceryCard {

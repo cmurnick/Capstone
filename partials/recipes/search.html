@@ -7,16 +7,16 @@
 
 <div id="recipes">
 
-    <div ng-repeat="recipe in recipes" class="col-sm-6 col-md-4 movie">
-      <div class="thumbnail">
+    <div ng-repeat="recipe in recipes" class="col-sm-6 col-md-4 ">
+      <div class="thumbnail bottomStick">
 				<img class="poster_path" ng-src="{{recipe.recipe.image}}">
         	<div class="caption">
         		<h3 class="title">{{recipe.recipe.label}}</h3>
-          	<p>
-  		        <a class="btn btn-primary toDetails" role="button" ng-click="viewLink(recipe.recipe.url)"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
-  		        <a class="btn btn-default toFavorite" role="button" ng-click="saveFavorite(recipe)"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
-              <button class="btn btn-primary menu" role="button"><i class="fa fa-cutlery" ng-click="addToMenu(recipe)" aria-hidden="true"></i></button>
-         		</p>
+          	<div class="menuButtonWrapper">
+  		        <a class="btn btn-sm floatButton toDetails" role="button" ng-click="viewLink(recipe.recipe.url)"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+  		        <a class="btn btn-sm floatButton toFavorite" role="button" ng-click="saveFavorite(recipe)"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
+              <a class="btn btn-sm floatButton menu" role="button"><i class="fa fa-cutlery" ng-click="addToMenu(recipe)" aria-hidden="true"></i></a>
+         		</div>
        </div>
      </div>
     </div>

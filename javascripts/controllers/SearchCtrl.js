@@ -41,7 +41,7 @@ app.controller("SearchCtrl", function($location, $rootScope, $scope, $window, Au
 	   		edRecipe.recipe.onMenu= true;
 			let newRecipe = RecipeService.createRecipeObject(edRecipe.recipe);
 			RecipeService.postNewRecipe(newRecipe).then((results) => {
-				console.log("saveFavoriteRecipe working from search?", results);
+				console.log("saveAddToMenu working from search?", results);
 				let ingredientsList = edRecipe.recipe.ingredientLines;
 				console.log("ingredientsList", edRecipe);
 				ingredientsList.forEach ((ingredient) => {
