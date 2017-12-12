@@ -73,7 +73,7 @@
 	display: flex;
   	align-content: center;
   	justify-content: center;
-  	// position: relative;
+  
 
 		
 }
@@ -92,4 +92,18 @@
 
 
 	}
+
+.menuWrap {
+	display: flex;
+	flex-direction: row;
+	overflow-x: auto;
+	background-color: $button;
+	padding-top: 30px;
+	position: relative;
+
+	.recipe {
+		min-width: 480px;
+
+	}
+}
 

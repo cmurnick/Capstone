@@ -7,8 +7,8 @@
     
           <div ng-repeat="recipe in recipes">
 
-            <div id="about-text">
-            <div ng-repeat="i in recipe.ingredients"  ng-class="{strike: deleted}" class="overallGroceryIngredient"><input class="checkbox" type="checkbox" ng-model="deleted">{{i.ingredient}}</div>
+            <div>
+            <div ng-repeat="i in recipe.ingredients"  ng-class="{strike: deleted}" class="overallGroceryIngredient"><input class="checkbox" type="checkbox" value="false" ng-click="haveIngredient(IngredientId)" ng-model="deleted">{{i.ingredient}}</div>
             </div>
           </div>
         
