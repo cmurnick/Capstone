@@ -27,7 +27,7 @@ app.service("RecipeService", function($http, $q, FIREBASE_CONFIG) {
 			 return $q((resolve, reject) => {
 			 	$http.get(`${FIREBASE_CONFIG.databaseURL}/recipes.json?orderBy="uid"&equalTo="${userUid}"`).then((results) => {
 			 		let dbRecipes = results.data;
-			 					 		Object.keys(dbRecipes).forEach((key) => {
+			 			Object.keys(dbRecipes).forEach((key) => {
 	                   dbRecipes[key].id = key; 
 	                    if(dbRecipes[key].onMenu){
 	                    recipes.push(dbRecipes[key]);

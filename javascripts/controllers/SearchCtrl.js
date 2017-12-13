@@ -26,7 +26,9 @@ app.controller("SearchCtrl", function($location, $rootScope, $scope, $window, Au
 				let ingredientsList = edRecipe.recipe.ingredientLines;
 				console.log("ingredientsList", edRecipe);
 				ingredientsList.forEach ((ingredient) => {
-					let newIngredient = {ingredient: ingredient, recipeId: results.data.name};
+
+
+					let newIngredient = {hasIngredient: false, ingredient: ingredient, recipeId: results.data.name};
 					// console.log("ingredients posting too?", results.data);
 					IngredientService.postNewIngredient(newIngredient);
 				});
@@ -45,7 +47,8 @@ app.controller("SearchCtrl", function($location, $rootScope, $scope, $window, Au
 				let ingredientsList = edRecipe.recipe.ingredientLines;
 				console.log("ingredientsList", edRecipe);
 				ingredientsList.forEach ((ingredient) => {
-					let newIngredient = {ingredient: ingredient, recipeId: results.data.name};
+					// ingredient.hasIngredient = false;
+					let newIngredient = {hasIngredient: false, ingredient: ingredient, recipeId: results.data.name};
 					// console.log("ingredients posting too?", results.data);
 					IngredientService.postNewIngredient(newIngredient);
 				});

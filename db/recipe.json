@@ -55,155 +55,193 @@
 
 			"ingredient0": {
 				"recipeId": "recipe0",
-				"ingredient": "1 bunch (about 6 ounces) kale (I used Lacinato or “Dinosaur” Kale but I understand that the curlier stuff works, too, possibly even better)"
+				"ingredient": "1 bunch (about 6 ounces) kale (I used Lacinato or “Dinosaur” Kale but I understand that the curlier stuff works, too, possibly even better)",
+				"hasIngredient": false
 			},
 			"ingredient1": {
 				"recipeId": "recipe0",
-				"ingredient": "1 tablespoon olive oil"
+				"ingredient": "1 tablespoon olive oil",
+				"hasIngredient": false
 			},
 			"ingredient2": {
 				"recipeId": "recipe0",
-				"ingredient": "sea salt"
+				"ingredient": "sea salt",
+				"hasIngredient": false
 			},
 			"ingredient3": {
 				"recipeId": "recipe1",
-				"ingredient": "1 carrots, cut into julienne strips"
+				"ingredient": "1 carrots, cut into julienne strips",
+				"hasIngredient": false
 			},
 			"ingredient4": {
 				"recipeId": "recipe1",
-				"ingredient": "1/2 cupshiitake mushrooms, stems discarded, thinly sliced"
+				"ingredient": "1/2 cupshiitake mushrooms, stems discarded, thinly sliced",
+				"hasIngredient": false
 			},
 			"ingredient5": {
 				"recipeId": "recipe1",
-				"ingredient": "2 large garlic cloves, minced"
+				"ingredient": "2 large garlic cloves, minced",
+				"hasIngredient": false
 			},
 			"ingredient6": {
 				"recipeId": "recipe1",
-				"ingredient": "1/2 onion, sliced"
+				"ingredient": "1/2 onion, sliced",
+				"hasIngredient": false
 			},
 			"ingredient7": {
 				"recipeId": "recipe1",
-				"ingredient": "3 tablespoons vegetable broth"
+				"ingredient": "3 tablespoons vegetable broth",
+				"hasIngredient": false
 			},
 			"ingredient8": {
 				"recipeId": "recipe1",
-				"ingredient": "2 tablespoons chinese rice wine"
+				"ingredient": "2 tablespoons chinese rice wine",
+				"hasIngredient": false
 			},
 			"ingredient9": {
 				"recipeId": "recipe1",
-				"ingredient": "1 teaspoon sugar"
+				"ingredient": "1 teaspoon sugar",
+				"hasIngredient": false
 			},
 			"ingredient10": {
 				"recipeId": "recipe1",
-				"ingredient": "1 teaspoon cornstarch"
+				"ingredient": "1 teaspoon cornstarch",
+				"hasIngredient": false
 			},
 			"ingredient11": {
 				"recipeId": "recipe1",
-				"ingredient": "1 teaspoon salt"
+				"ingredient": "1 teaspoon salt",
+				"hasIngredient": false
 			},
 			"ingredient12": {
 				"recipeId": "recipe1",
-				"ingredient": "2 tablespoons vegetable oil"
+				"ingredient": "2 tablespoons vegetable oil",
+				"hasIngredient": false
 			},
 			"ingredient13": {
 				"recipeId": "recipe1",
-				"ingredient": "1/4 teaspoon sesame oil"
+				"ingredient": "1/4 teaspoon sesame oil",
+				"hasIngredient": false
 			},
 			"ingredient14": {
 				"recipeId": "recipe2",
-				"ingredient": "1 head cauliflower"
+				"ingredient": "1 head cauliflower",
+				"hasIngredient": false
 			},
 			"ingredient15": {
 				"recipeId": "recipe2",
-				"ingredient": "Spray oil (like pam)"
+				"ingredient": "Spray oil (like pam)",
+				"hasIngredient": false
 			},
 			"ingredient16": {
 				"recipeId": "recipe2",
-				"ingredient": "1 pinch salt"
+				"ingredient": "1 pinch salt",
+				"hasIngredient": false
 			},
 			"ingredient17": {
 				"recipeId": "recipe2",
-				"ingredient": "1 pinch turmeric"
+				"ingredient": "1 pinch turmeric",
+				"hasIngredient": false
 			},
 			"ingredient18": {
 				"recipeId": "recipe3",
-				"ingredient": "1 tbsp. olive oil"
+				"ingredient": "1 tbsp. olive oil",
+				"hasIngredient": false
 			},
 			"ingredient19": {
 				"recipeId": "recipe3",
-				"ingredient": "2 stalk celery"
+				"ingredient": "2 stalk celery",
+				"hasIngredient": false
 			},
 			"ingredient20": {
 				"recipeId": "recipe3",
-				"ingredient": "2 large ripe Bartlett pears"
+				"ingredient": "2 large ripe Bartlett pears",
+				"hasIngredient": false
 			},
 			"ingredient21": {
 				"recipeId": "recipe3",
-				"ingredient": "4 green onions"
+				"ingredient": "4 green onions",
+				"hasIngredient": false
 			},
 			"ingredient22": {
 				"recipeId": "recipe3",
-				"ingredient": "½ c. fresh parsley leaves"
+				"ingredient": "½ c. fresh parsley leaves",
+				"hasIngredient": false
 			},
 			"ingredient23": {
 				"recipeId": "recipe3",
-				"ingredient": "3 c. water"
+				"ingredient": "3 c. water",
+				"hasIngredient": false
 			},
 			"ingredient24": {
 				"recipeId": "recipe3",
-				"ingredient": "1 package cornbread stuffing mix"
+				"ingredient": "1 package cornbread stuffing mix",
+				"hasIngredient": false
 			},
 			"ingredient25": {
 				"recipeId": "recipe4",
-				"ingredient": "2 lbs apples (either cortland or gala for best results), cored and chopped"
+				"ingredient": "2 lbs apples (either cortland or gala for best results), cored and chopped",
+				"hasIngredient": false
 			},
 			"ingredient26": {
 				"recipeId": "recipe4",
-				"ingredient": "2 tsp cinnamon"
+				"ingredient": "2 tsp cinnamon",
+				"hasIngredient": false
 			},
 			"ingredient27": {
 				"recipeId": "recipe4",
-				"ingredient": "Juice of 1 lemon"
+				"ingredient": "Juice of 1 lemon",
+				"hasIngredient": false
 			},
 			"ingredient28": {
 				"recipeId": "recipe4",
-				"ingredient": "1/3 cup brown sugar"
+				"ingredient": "1/3 cup brown sugar",
+				"hasIngredient": false
 			},
 			"ingredient29": {
 				"recipeId": "recipe5",
-				"ingredient": "8 ounces tempeh"
+				"ingredient": "8 ounces tempeh",
+				"hasIngredient": false
 			},
 			"ingredient30": {
 				"recipeId": "recipe5",
-				"ingredient": "3 tablespoons soy sauce (I prefer shoyu sauce)"
+				"ingredient": "3 tablespoons soy sauce (I prefer shoyu sauce)",
+				"hasIngredient": false
 			},
 			"ingredient31": {
 				"recipeId": "recipe5",
-				"ingredient": "3 tablespoons maple syrup"
+				"ingredient": "3 tablespoons maple syrup",
+				"hasIngredient": false
 			},
 			"ingredient32": {
 				"recipeId": "recipe5",
-				"ingredient": "1 teaspoon rice vinegar"
+				"ingredient": "1 teaspoon rice vinegar",
+				"hasIngredient": false
 			},
 			"ingredient33": {
 				"recipeId": "recipe5",
-				"ingredient": "2 cloves garlic, peeled, crushed and chopped"
+				"ingredient": "2 cloves garlic, peeled, crushed and chopped",
+				"hasIngredient": false
 			},
 			"ingredient34": {
 				"recipeId": "recipe5",
-				"ingredient": "1/2 teaspoon powdered chipotle (or a couple pinches of cayenne)"
+				"ingredient": "1/2 teaspoon powdered chipotle (or a couple pinches of cayenne)",
+				"hasIngredient": false
 			},
 			"ingredient35": {
 				"recipeId": "recipe5",
-				"ingredient": "1 -2 portobello mushrooms"
+				"ingredient": "1 -2 portobello mushrooms",
+				"hasIngredient": false
 			},
 			"ingredient36": {
 				"recipeId": "recipe5",
-				"ingredient": "2 1/2 cups cooked quinoa or brown rice"
+				"ingredient": "2 1/2 cups cooked quinoa or brown rice",
+				"hasIngredient": false
 			},
 			"ingredient37": {
 				"recipeId": "recipe5",
-				"ingredient": "a handful of blanched green beans"
+				"ingredient": "a handful of blanched green beans",
+				"hasIngredient": false
 			}
 		}
 }
