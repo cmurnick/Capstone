@@ -1,8 +1,15 @@
+
+	
+
+
+
 //left side div on grocery list 
 .yellowList {
 	background-color: #F9F6B3;
 	border-radius: 10px;
-	float: right;
+	position: absolute;
+	margin-top: 25px;
+	padding-bottom: 18px;
 	
 	.checkbox {
 		margin-right: 5px;
@@ -14,12 +21,6 @@
     text-decoration-line: bold;
 }
 
-//left column with entire grocery list
-.overallGrocery {
-	margin-bottom: 10px;
-	font-size: 18px;
-
-}
 
 //overall ingredients list on grocery page
 .overallGroceryIngredient {
@@ -27,36 +28,18 @@
 	border-bottom: 1px solid black;
 }
 
-table, th, td {
-	padding: 25px 5px 25px 5px;
-}
 
-
-
-// #about-text{
-//    width:700px;
-//    // height:200px;
-//    -webkit-column-count: 2;
-//       -moz-column-count: 2;
-//            column-count: 2;
-//   -webkit-column-gap: 10px;
-//      -moz-column-gap: 10px;
-//           column-gap: 10px; 
-// }
 
 //side picture in grocery page
 .home {
-    // background-image: url('../images/foodPlate.jpg');
-    // background-repeat: no-repeat;
-    // height: -webkit-fill-available;
-    // background-size: 100%;
+    background-image: url('../images/foodPlate.jpg');
+    background-repeat: no-repeat;
+    height: 900px;
+}
 
-   background-image: url('../images/foodPlate.jpg');
-   width: 50%;
-   position: absolute;
-   left: 0px;
-   height: 100%;
 
+.groceryHeader {
+	text-align: center;
 }
 
 
