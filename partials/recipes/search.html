@@ -8,11 +8,11 @@
 <div id="recipes">
 
     <div ng-repeat="recipe in recipes" class="col-sm-6 col-md-4  ">
-      <div class="thumbnail cardHeight bottomStick">
+      <div class="thumbnail cardHeight outer bottomStick">
 				<img class="poster_path" ng-src="{{recipe.recipe.image}}">
         	<div class="caption">
         		<h3 class="title">{{recipe.recipe.label}}</h3>
-          	<div class="menuButtonWrapper">
+          	<div class="menuButtonWrapper copyright">
   		        <a class="btn btn-sm floatButton toDetails" data-toggle="tooltip" title="See Details" role="button" ng-click="viewLink(recipe.recipe.url)"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
   		        <a class="btn btn-sm floatButton toFavorite" role="button" data-toggle="tooltip" title="Save to Favorites" ng-click="saveFavorite(recipe)"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
               <a class="btn btn-sm floatButton menu" data-toggle="tooltip" title="Save to Menu" role="button"><i class="fa fa-cutlery" ng-click="addToMenu(recipe)" aria-hidden="true"></i></a>

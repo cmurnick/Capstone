@@ -5,19 +5,53 @@
     
   
   <div>
-  <div class="home col-md-6"></div>
+    <div class ="row">
+      <div class ="home col-md-6 col-sm-6">
+      </div>
 
-  <div class="col-sm-12 col-md-6 yellowList">
-          <div ng-repeat="recipe in recipes">
+      <div class ="col-md-6 col-sm-6 yellowList">
+         <div ng-repeat="recipe in recipes">
 
-            <div>
-            <div ng-repeat="i in recipe.ingredients | filter: {hasIngredient: false}"  ng-class="{strike: deleted}" class="overallGroceryIngredient"><input class="checkbox" type="checkbox" value="false" ng-click="switchHasIngredient(i)" ng-model="deleted" ng-checked="i.hasIngredient">{{i.ingredient}}
-            </div>
-            </div>
+        
+          <div ng-repeat="i in recipe.ingredients | filter: {hasIngredient: false}"  ng-class="{strike: deleted}" class="overallGroceryIngredient"><input class="checkbox" type="checkbox" value="false" ng-click="switchHasIngredient(i)" ng-model="deleted" ng-checked="i.hasIngredient">{{i.ingredient}}
           </div>
+        </div>
+
+
+
+
+
+       </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+  <div class="flex-container">
+    <div class="home col-md-6"></div>
+
+    <div class="col-sm-12 col-md-6 yellowList">
+      <div ng-repeat="recipe in recipes">
+
+        
+        <div ng-repeat="i in recipe.ingredients | filter: {hasIngredient: false}"  ng-class="{strike: deleted}" class="overallGroceryIngredient"><input class="checkbox" type="checkbox" value="false" ng-click="switchHasIngredient(i)" ng-model="deleted" ng-checked="i.hasIngredient">{{i.ingredient}}
+        </div>
+      </div>
         
    </div>     
   </div>
 </div>
 
-  
+   -->
