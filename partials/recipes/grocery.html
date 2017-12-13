@@ -1,15 +1,44 @@
 <div>
-  <div class="text-center">
+<!--   <div class="text-center">
     <h1 class="mainHeader">Grocery List</h1>
-  </div>
+  </div> -->
     
   
-  <div>
+   <div class="container-fluid">
     <div class ="row">
-      <div class ="home col-md-6 col-sm-6">
+      <div class ="home col-md-12">
+        <!-- <h1>Grocery List</h1> -->
+        <div class ="col-md-6 col-md-offset-3 yellowList">
+           <h1 class="groceryHeader">Grocery List</h1>
+        <div ng-repeat="recipe in recipes">
+
+        
+          <div ng-repeat="i in recipe.ingredients | filter: {hasIngredient: false}"  ng-class="{strike: deleted}" class="overallGroceryIngredient">
+            <input class="checkbox" type="checkbox" value="false" ng-click="switchHasIngredient(i)" ng-model="deleted" ng-checked="i.hasIngredient">{{i.ingredient}}
+          </div>
+        </div>
+
+
+
+
+
+       </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+<!--   <div class="container-fluid">
+    <div class ="row">
+      <div class ="home col-md-8 col-sm-6">
       </div>
 
-      <div class ="col-md-6 col-sm-6 yellowList">
+      <div class ="col-md-4 col-sm-6 yellowList">
          <div ng-repeat="recipe in recipes">
 
         
@@ -23,7 +52,7 @@
 
        </div>
     </div>
-  </div>
+  </div> -->
 
 </div>
 
