@@ -11,7 +11,7 @@
           <div ng-repeat="recipe in recipes">
 
             <div>
-            <div ng-repeat="i in recipe.ingredients"  ng-class="{strike: deleted}" class="overallGroceryIngredient"><input class="checkbox" type="checkbox" value="false" ng-click="haveIngredient(IngredientId)" ng-model="deleted">{{i.ingredient}}
+            <div ng-repeat="i in recipe.ingredients | filter: {hasIngredient: false}"  ng-class="{strike: deleted}" class="overallGroceryIngredient"><input class="checkbox" type="checkbox" value="false" ng-click="switchHasIngredient(i)" ng-model="deleted" ng-checked="i.hasIngredient">{{i.ingredient}}
             </div>
             </div>
           </div>

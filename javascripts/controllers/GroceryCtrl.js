@@ -4,7 +4,7 @@ app.controller("GroceryCtrl", function($rootScope, $scope, $window, AuthService,
   $scope.recipes = [];
 
 
-  const getRecipes = () => {
+  const getIngredients = () => {
     RecipeService.getOnMenu(AuthService.getCurrentUid()).then((results) => {
         results.forEach((result) => {
             IngredientService.getIngredientsByRecipe(result.id).then ((ingredients) => {
@@ -19,8 +19,34 @@ app.controller("GroceryCtrl", function($rootScope, $scope, $window, AuthService,
     });
 };
 
-getRecipes();
+getIngredients();
 
+
+// $scope.hasIngredient = (recipe, ingredient) => {
+//         recipe.uid = AuthService.getCurrentUid();
+//         ingredient.hasIngredient = true;
+//         let updatedIngredient = IngredientService.createIngredientObject(ingredient);
+//         IngredientService.updateIngredient(updatedIngredient, ingredient.id).then((result) => {
+
+//         }).catch((err) => {
+//             console.log("error in update ingredient to true", err);
+//         });
+//     };
+
+
+
+
+    $scope.switchHasIngredient = (ingredient) => {
+            console.log("ingredient", ingredient);
+            ingredient.hasIngredient = !ingredient.hasIngredient;
+            let updatedIngredient = IngredientService.createIngredientObject(ingredient);
+            IngredientService.updateIngredient(updatedIngredient, ingredient.id).then((result) => {
+                getIngredients();
+            }).catch((err) => {
+                console.log("error in update ingredient", err);
+            }); 
+        };
+  }); 
     // $scope.haveIngredient = (ingredient, IngredientId) => {
     //         if(value === false) {
     //         ingredient.haveIngredient = true;
@@ -55,5 +81,3 @@ getRecipes();
     //        let ingredients.haveItem = true;
 
     // }
-
-});

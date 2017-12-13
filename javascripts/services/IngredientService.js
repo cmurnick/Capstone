@@ -15,7 +15,7 @@ app.service("IngredientService", function($http, $q, FIREBASE_CONFIG) {
 
 				Object.keys(fbIngredients).forEach((key) => {
 					fbIngredients[key].id = key;
-				   ingredients.push(fbIngredients[key]);
+	                    ingredients.push(fbIngredients[key]);
 				 });
 				 resolve(ingredients);
 			}).catch((err) => {
@@ -25,11 +25,28 @@ app.service("IngredientService", function($http, $q, FIREBASE_CONFIG) {
 		});
    };
 
+   	const updateHasIngredient = (ingredientId, hasIngredient) => {
+   			return $http.patch(`${FIREBASE_CONFIG.databaseURL}/ingredients/${ingredientId}.json`, JSON.stringify({hasIngredient}));
+
+   	};
+
+   	const createIngredientObject= (ingredient) => {
+			console.log("ingredient Object", ingredient);
+			return {
+				"recipeId": ingredient.recipeId,
+				"ingredient": ingredient.ingredient,
+				"hasIngredient": ingredient.hasIngredient
+				};
+			};
+
    	const deleteIngredient= (ingredientId) => {
 		return $http.delete(`${FIREBASE_CONFIG.databaseURL}/ingredients/${ingredientId}.json`);
 		};
 
-	
+	const updateIngredient = (ingredient, ingredientId) => {
+			return $http.put(`${FIREBASE_CONFIG.databaseURL}/ingredients/${ingredientId}.json`, JSON.stringify(ingredient));
 
-	return {postNewIngredient, getIngredientsByRecipe, deleteIngredient};
+		};
+
+	return {postNewIngredient, getIngredientsByRecipe, deleteIngredient, createIngredientObject, updateIngredient, updateHasIngredient};
 });
