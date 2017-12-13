@@ -56,13 +56,21 @@ app.controller("MenuCtrl", function($rootScope, $scope, $window, AuthService, In
 			getRecipes();	
 		};
 	
-	$scope.deleteAllRecipes = () => {
+	$scope.deleteAllRecipes = (recipe, recipeId) => {
 		$scope.recipes.forEach((recipe) => {
 			if(recipe.isFavorite) {
 				recipe.onMenu = false;
 				let updatedRecipe = RecipeService.createRecipeObject(recipe);
 				RecipeService.updateRecipe(updatedRecipe, recipe.id).then((result) => {
+					IngredientService.getIngredientsByRecipe(recipeId).then((ingredients) => {
+						ingredients.forEach((ingredient) => {
+							const hasIngredient = false;
+							IngredientService.updateHasIngredient(ingredient.id, hasIngredient);
+					});
+
+
 					getRecipes();
+				});
 				}).catch((err) => {
 					console.log("error in DeleteRecipe", err);
 				}); 
