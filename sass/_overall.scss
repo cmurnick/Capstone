@@ -15,3 +15,14 @@ body {
 	font-weight: bolder;
 }
 
+
+
+//thee buttons at the bottom of each card on search/fav/menu pages
+.menuButtonWrapper {
+	display: flex;
+  	align-content: center;
+  	justify-content: center;
+  	width: 100%;
+  	position: absolute;
+  	// position: relative;	
+}
