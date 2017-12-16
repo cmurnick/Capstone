@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("SearchCtrl", function($location, $rootScope, $scope, $window, AuthService,  RecipeService, IngredientService,  EdamamService) {
+app.controller("SearchCtrl", function($location, $rootScope, $scope, $window, AuthService,  RecipeService, ToastService, IngredientService,  EdamamService) {
 	$scope.recipes = [];
 
 	$scope.enterPush = (event) => {
@@ -51,7 +51,9 @@ app.controller("SearchCtrl", function($location, $rootScope, $scope, $window, Au
 					let newIngredient = {hasIngredient: false, ingredient: ingredient, recipeId: results.data.name};
 					// console.log("ingredients posting too?", results.data);
 					IngredientService.postNewIngredient(newIngredient);
+					
 				});
+				ToastService.toast("Added to Menu");
 			}).catch((err) => {
 				console.log("error in saveFavorite", err);
 			});

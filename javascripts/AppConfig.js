@@ -86,3 +86,12 @@ app.config(function($routeProvider) {
 		})
 		.otherwise('/auth');
 });
+
+app.config(['ngToastProvider', function(ngToast) {
+  ngToast.configure({
+    verticalPosition: 'top',
+    horizontalPosition: 'center',
+    animation: 'fade',
+    maxNumber: 1
+  });
+}]);
