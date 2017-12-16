@@ -32,9 +32,11 @@
 
 //side picture in grocery page
 .home {
-    background-image: url('../images/foodPlate.jpg');
+	background-image: url('../images/carrotcrop.jpg');
+	background-size: cover; 
+	background-attachment: fixed;
     background-repeat: no-repeat;
-    height: 900px;
+    height: 1500px;
 }
 
 

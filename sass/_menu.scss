@@ -68,17 +68,6 @@
 }
 
 
-//thee buttons at the bottom of each card
-.menuButtonWrapper {
-	display: flex;
-  	align-content: center;
-  	justify-content: center;
-  	width: 100%;
-  
-
-		
-}
-
 .floatButton {
 		background-color: $button;
 		color: $btnFont;
@@ -99,7 +88,7 @@
 	flex-direction: row;
 	overflow-x: auto;
 	background-image: -webkit-linear-gradient(left, #C3FB94 60%, #F6F6F6 100%);
-	padding-top: 30px;
+	// padding-top: 30px;
 	border-radius: 5px;
 	// position: relative;
 
