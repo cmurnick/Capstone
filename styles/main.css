@@ -21,8 +21,7 @@ body {
   display: flex;
   align-content: center;
   justify-content: center;
-  width: 100%;
-  position: absolute; }
+  width: 100%; }
 
 .groceryImage {
   width: 100px;
@@ -111,9 +110,11 @@ body {
   border-bottom: 1px solid black; }
 
 .home {
-  background-image: url("../images/carrots2.jpg");
+  background-image: url("../images/carrotcrop.jpg");
+  background-size: cover;
+  background-attachment: fixed;
   background-repeat: no-repeat;
-  height: 900px; }
+  height: 1500px; }
 
 .groceryHeader {
   text-align: center; }
