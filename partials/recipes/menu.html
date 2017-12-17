@@ -20,16 +20,16 @@
 			                  <li class="groceryIngredient">{{i.ingredient}}</li>
 						</ul>
 						</div>
-			            <div class="menuButtonWrapper" ng-if="!recipe.isFavorite">
+			            <div class="menuButtonWrapper" >
 							<button class="floatButton btn-sm delete" data-toggle="tooltip" title="Remove From Menu" role="button" ng-click="removeFromMenu(recipe, recipe.id)"><i class="fa fa-trash-o fa-sm" aria-hidden="true"></i></button>
-							<button class="floatButton btn-sm toFavorite" role="button" data-toggle="tooltip" title="Save as Favorite" ng-click="saveFavorite(recipe, recipe.id, true)"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></button>
+							<button class="floatButton btn-sm toFavorite" role="button" data-toggle="tooltip" title="Save as Favorite" ng-click="saveFavorite(recipe, recipe.id)"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></button>
 							<button class="floatButton btn-sm detail" data-toggle="tooltip" title="See Details" role="button"><i class="fa fa-info-circle toDetails"  ng-click="viewLink(recipe.recipeURL)" aria-hidden="true"></i></button>
 						</div>
-						<div class="menuButtonWrapper" ng-if="recipe.isFavorite">
+						<!-- <div class="menuButtonWrapper" ng-if="recipe.isFavorite">
 							<button class="floatButton btn-sm delete" data-toggle="tooltip" title="Remove From Menu" role="button" ng-click="removeFromMenu(recipe, recipe.id)"><i class="fa fa-trash-o fa-sm" aria-hidden="true"></i></button>
 							<button class="floatButton btn-sm toFavorite" role="button" data-toggle="tooltip" title="Save as Favorite" ng-click="saveFavorite(recipe, recipe.id, false)"><i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
 							<button class="floatButton btn-sm detail" data-toggle="tooltip" title="See Details" role="button"><i class="fa fa-info-circle toDetails"  ng-click="viewLink(recipe.recipeURL)" aria-hidden="true"></i></button>
-							</div>
+							</div> -->
 		          </div>
 	            
 	        </div>

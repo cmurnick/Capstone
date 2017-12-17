@@ -90,8 +90,8 @@ app.controller("MenuCtrl", function($rootScope, $scope, $window, AuthService, To
 				getRecipes();	
 };
 
-	$scope.saveFavorite = (recipe, recipeId, isFavorited) => {
-		recipe.isFavorite = isFavorited;
+	$scope.saveFavorite = (recipe, recipeId) => {
+		recipe.isFavorite = true;
 		let updatedRecipe = RecipeService.createRecipeObject(recipe);
 		RecipeService.updateRecipe(updatedRecipe, recipeId).then((result) => {
 			getRecipes();
