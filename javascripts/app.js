@@ -2,4 +2,4 @@
 
 "use strict";
 
-const app = angular.module("RecipeApp", ["ngAnimate", "ngRoute", "ngSanitize"]);
+const app = angular.module("RecipeApp", ["ngAnimate", "ngRoute", "ngSanitize", "ngToast"]);

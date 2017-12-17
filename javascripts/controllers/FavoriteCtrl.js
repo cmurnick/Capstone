@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("FavoriteCtrl", function ($location, $rootScope, $scope, $window, AuthService, IngredientService, RecipeService) {
+app.controller("FavoriteCtrl", function ($location, $rootScope, $scope, $window, ToastService, AuthService, IngredientService, RecipeService) {
 	$scope.controller = "FavoriteCtrl";
 
 	const getRecipes = () => {
@@ -19,7 +19,7 @@ app.controller("FavoriteCtrl", function ($location, $rootScope, $scope, $window,
 		recipe.onMenu = true;
 		let updatedRecipe = RecipeService.createRecipeObject(recipe);
 		RecipeService.updateRecipe(updatedRecipe, recipe.id).then((result) => {
-
+		ToastService.toast("Added to Menu");
 		}).catch((err) => {
 			console.log("error in update movie", err);
 		});
