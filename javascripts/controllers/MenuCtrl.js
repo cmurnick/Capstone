@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("MenuCtrl", function($rootScope, $scope, $window, AuthService, IngredientService, RecipeService){
+app.controller("MenuCtrl", function($rootScope, $scope, $window, AuthService, ToastService, IngredientService, RecipeService){
   $scope.recipes = [];
 
 	$scope.viewLink = (url) =>{
@@ -90,11 +90,12 @@ app.controller("MenuCtrl", function($rootScope, $scope, $window, AuthService, In
 				getRecipes();	
 };
 
-	$scope.saveFavorite = (recipe, recipeId) => {
-		recipe.isFavorite = true;
+	$scope.saveFavorite = (recipe, recipeId, isFavorited) => {
+		recipe.isFavorite = isFavorited;
 		let updatedRecipe = RecipeService.createRecipeObject(recipe);
 		RecipeService.updateRecipe(updatedRecipe, recipeId).then((result) => {
 			getRecipes();
+			ToastService.toast("Added to Favorite");
 		}).catch((err) => {
 			console.log("error in update movie", err);
 		});

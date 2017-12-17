@@ -46,10 +46,15 @@
 	}
 }
 
+.scroll {
+		height: 150px;
+		overflow: scroll;
+}
 
 .ingredientHolder { 
 	list-style: none;
 	margin-bottom: 2px;
+
 }
 
 .groceryIngredient { 
@@ -83,18 +88,12 @@
 
 	}
 
-.menuWrap {
-	display: flex;
-	flex-direction: row;
-	overflow-x: auto;
-	background-image: -webkit-linear-gradient(left, #C3FB94 60%, #F6F6F6 100%);
-	// padding-top: 30px;
-	border-radius: 5px;
-	// position: relative;
+.menuCardHeight {
+	height: 250px;
+	
+}
 
-	.recipe {
-		min-width: 480px;
-
-	}
+.menuButtonWrapper {
+	position: relative;
 }
 

@@ -10,7 +10,7 @@
         	
       		<img class="favImage" ng-src="{{recipe.image}}">
       		<h1 class="title text-center">{{recipe.label}}</h1>
-          <div class="copyright menuButtonWrapper">
+          <div class="copyright text-center">
           	<button class="floatButton btn-sm delete text-center" data-toggle="tooltip" title="Delete" role="button" ng-click="deleteRecipe(recipe.id)"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
          		<button class="floatButton btn-sm detail" ng-click="viewLink(recipe.recipeURL)"  data-toggle="tooltip" title="See Details" role="button"><i class="fa fa-info-circle toDetails"  aria-hidden="true"></i></button>
          		<button class="floatButton btn-sm menu" ng-click="addToMenu(recipe)"data-toggle="tooltip" title="Add to Menu" role="button"><i class="fa fa-cutlery"  aria-hidden="true"></i></button>

@@ -1,19 +1,10 @@
-
-//image on favorite page
-// .favImage {
-// 	height: 200px;
-// 	width: auto;
-// 	justify-content: center;
-// 	margin: 0px;
-// }
-
-// .bottomStick {
-// 	position: relative;
-// }
-
 .copyright {
     position: absolute;
-    bottom: 5px;    
+    bottom: 5px; 
+    width: 100%;
+    align-content: center;   
+    // margin: 0;
+    margin-left: -5px;
 }
 
 .outer {

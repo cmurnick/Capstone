@@ -16,9 +16,9 @@ app.controller("SearchCtrl", function($location, $rootScope, $scope, $window, Au
 
 
 
-	$scope.saveFavorite= (edRecipe) => {
+	$scope.saveFavorite= (edRecipe, isFavorited) => {
 			edRecipe.recipe.uid = AuthService.getCurrentUid();
-			edRecipe.recipe.isFavorite = true;
+			edRecipe.recipe.isFavorite = isFavorited;
 	   		edRecipe.recipe.onMenu= false;
 			let newRecipe = RecipeService.createRecipeObject(edRecipe.recipe);
 			RecipeService.postNewRecipe(newRecipe).then((results) => {
@@ -26,20 +26,18 @@ app.controller("SearchCtrl", function($location, $rootScope, $scope, $window, Au
 				let ingredientsList = edRecipe.recipe.ingredientLines;
 				console.log("ingredientsList", edRecipe);
 				ingredientsList.forEach ((ingredient) => {
-
-
 					let newIngredient = {hasIngredient: false, ingredient: ingredient, recipeId: results.data.name};
-					// console.log("ingredients posting too?", results.data);
 					IngredientService.postNewIngredient(newIngredient);
 				});
+				ToastService.toast("Added to Favorites");
 			}).catch((err) => {
 				console.log("error in saveFavorite", err);
 			});
 		};
 			
-	$scope.addToMenu= (edRecipe) => {
+	$scope.addToMenu= (edRecipe, isFavorited) => {
 			edRecipe.recipe.uid = AuthService.getCurrentUid();
-			edRecipe.recipe.isFavorite = false;
+			edRecipe.recipe.isFavorite = isFavorited;
 	   		edRecipe.recipe.onMenu= true;
 			let newRecipe = RecipeService.createRecipeObject(edRecipe.recipe);
 			RecipeService.postNewRecipe(newRecipe).then((results) => {
