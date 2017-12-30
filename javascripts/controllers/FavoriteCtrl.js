@@ -44,7 +44,9 @@ app.controller("FavoriteCtrl", function ($location, $rootScope, $scope, $window,
 		$window.open(url, '_blank');
 	};
 
-	
+	$scope.editComment = (recipeId) => {
+		$location.path(`/recipe/favComment/${recipeId}`);
+	};
 
 });
 

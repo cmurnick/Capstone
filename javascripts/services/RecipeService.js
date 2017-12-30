@@ -49,7 +49,8 @@ app.service("RecipeService", function($http, $q, FIREBASE_CONFIG) {
 				"image": recipe.image,
 				"isFavorite": recipe.isFavorite,
 				"onMenu": recipe.onMenu,
-				"uid": recipe.uid
+				"uid": recipe.uid,
+				"comments": recipe.comments
 				};
 			};
 
@@ -66,7 +67,11 @@ app.service("RecipeService", function($http, $q, FIREBASE_CONFIG) {
 		return $http.delete(`${FIREBASE_CONFIG.databaseURL}/recipes/${recipeId}.json`);
 		};
 
-		return {getFavoriteRecipes, createRecipeObject, postNewRecipe, getOnMenu, updateRecipe, deleteRecipe};
+		const getSingleRecipe = (recipeId)=> {
+			return $http.get(`${FIREBASE_CONFIG.databaseURL}/recipes/${recipeId}.json`);
+	};
+
+		return {getFavoriteRecipes, createRecipeObject, postNewRecipe, getOnMenu, updateRecipe, deleteRecipe, getSingleRecipe};
 });
 
 
