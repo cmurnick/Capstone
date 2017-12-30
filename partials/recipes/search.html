@@ -12,20 +12,21 @@
 					<!-- cardHeight bottomStick -->
 						<h3 class="title">{{recipe.recipe.label}}</h3>
 					
-						<div class=" copyright" ng-if="!recipe.isFavorite">
-							<button class="btn btn-sm floatButton toDetails" data-toggle="tooltip" title="See Details" role="button" ng-click="viewLink(recipe.recipe.url)"><i class="fa fa-info-circle " aria-hidden="true"></i></button>
+						<div class=" copyright">
+								<!-- ng-if="!recipe.isFavorite" -->
+							<button class="btn btn-sm floatButton toDetails" data-toggle="tooltip" title="See Details" role="button" ng-click="viewLink(recipe.recipe.url)"><i class="fa fa-lg fa-info-circle " aria-hidden="true"></i></button>
 
-							<button class="btn btn-sm floatButton toFavorite" role="button" data-toggle="tooltip" title="Save to Favorites" ng-click="saveFavorite(recipe, true)"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></button>
+							<button class="btn btn-sm floatButton toFavorite" role="button" data-toggle="tooltip" title="Save to Favorites" ng-click="saveFavorite(recipe, true)"><i class="fa fa-lg fa-thumbs-o-up" aria-hidden="true"></i></button>
 
-							<button class="btn btn-sm floatButton menu" data-toggle="tooltip" title="Save to Menu" role="button"><i class="fa fa-cutlery" ng-click="addToMenu(recipe)" aria-hidden="true"></i></button>
+							<button class="btn btn-sm floatButton menu" data-toggle="tooltip" title="Save to Menu" role="button"><i class="fa fa-cutlery fa-lg" ng-click="addToMenu(recipe)" aria-hidden="true"></i></button>
 						</div>
 
 						<div class=" copyright" ng-if="recipe.isFavorite">
-								<button class="btn btn-sm floatButton toDetails" data-toggle="tooltip" title="See Details" role="button" ng-click="viewLink(recipe.recipe.url)"><i class="fa fa-info-circle " aria-hidden="true"></i></button>
+								<button class="btn btn-sm floatButton toDetails" data-toggle="tooltip" title="See Details" role="button" ng-click="viewLink(recipe.recipe.url)"><i class="fa fa-info-circle fa-lg" aria-hidden="true"></i></button>
 
-								<button class="btn btn-sm floatButton toFavorite" role="button" data-toggle="tooltip" title="Save to Favorites" ng-click="saveFavorite(recipe, false)"><i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
+								<button class="btn btn-sm floatButton toFavorite" role="button" data-toggle="tooltip" title="Save to Favorites" ng-click="saveFavorite(recipe, false)"><i class="fa fa-thumbs-up fa-lg" aria-hidden="true"></i></button>
 
-								<button class="btn btn-sm floatButton menu" data-toggle="tooltip" title="Save to Menu" role="button"><i class="fa fa-cutlery" ng-click="addToMenu(recipe)" aria-hidden="true"></i></button>
+								<button class="btn btn-sm floatButton menu" data-toggle="tooltip" title="Save to Menu" role="button"><i class="fa fa-cutlery fa-lg" ng-click="addToMenu(recipe)" aria-hidden="true"></i></button>
 							</div>
 				<!-- </div> -->
 		</div>

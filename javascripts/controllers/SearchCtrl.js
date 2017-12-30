@@ -19,7 +19,9 @@ app.controller("SearchCtrl", function($location, $rootScope, $scope, $window, Au
 	$scope.saveFavorite= (edRecipe, isFavorited) => {
 			edRecipe.recipe.uid = AuthService.getCurrentUid();
 			edRecipe.recipe.isFavorite = isFavorited;
-	   		edRecipe.recipe.onMenu= false;
+			edRecipe.recipe.onMenu= false;
+			edRecipe.recipe.comments = "";
+
 			let newRecipe = RecipeService.createRecipeObject(edRecipe.recipe);
 			RecipeService.postNewRecipe(newRecipe).then((results) => {
 				console.log("saveFavoriteRecipe working from search?", results);
@@ -38,6 +40,7 @@ app.controller("SearchCtrl", function($location, $rootScope, $scope, $window, Au
 	$scope.addToMenu= (edRecipe, isFavorited) => {
 			edRecipe.recipe.uid = AuthService.getCurrentUid();
 			edRecipe.recipe.isFavorite = isFavorited;
+			edRecipe.recipe.comments = "";
 	   		edRecipe.recipe.onMenu= true;
 			let newRecipe = RecipeService.createRecipeObject(edRecipe.recipe);
 			RecipeService.postNewRecipe(newRecipe).then((results) => {

@@ -74,16 +74,16 @@ app.config(function($routeProvider) {
 			controller:'MenuCtrl',
 			resolve: {isAuth}
 		})
-            .when("/grocery", {
+    .when("/grocery", {
 			templateUrl: 'partials/recipes/grocery.html',
 			controller:'GroceryCtrl',
 			resolve: {isAuth}
 		})
-		.when("/recipe/:id", {
-			templateUrl: 'partials/recipes/recipe_detail.html',
-			controller:'RecipeDetailCtrl',
-			resolve: {isAuth}
-		})
+    .when("/recipe/favComment/:id", {
+      templateUrl: 'partials/recipes/favComment.html',
+      controller: 'FavCommentCtrl',
+      resolve: {isAuth}
+    })
 		.otherwise('/auth');
 });
 
