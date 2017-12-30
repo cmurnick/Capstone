@@ -10,7 +10,8 @@
 	<div class="menuWrap">
 	    <!-- <div class="row"> -->
 	      <div ng-repeat="recipe in recipes" class="col-sm-12 col-md-6 recipe">
-	        <div class="thumbnail menuCardHeight ">
+	        <div class="menuCardHeight ">
+				<!-- thumbnail -->
 	            <div class="imageHeader"><img class="groceryImage" ng-src="{{recipe.image}}">
 	                <h1 class="groceryTitle">{{recipe.label}}</h1>
 	            </div>
@@ -25,11 +26,6 @@
 							<button class="floatButton btn-sm toFavorite" role="button" data-toggle="tooltip" title="Save as Favorite" ng-click="saveFavorite(recipe, recipe.id)"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></button>
 							<button class="floatButton btn-sm detail" data-toggle="tooltip" title="See Details" role="button"><i class="fa fa-info-circle toDetails"  ng-click="viewLink(recipe.recipeURL)" aria-hidden="true"></i></button>
 						</div>
-						<!-- <div class="menuButtonWrapper" ng-if="recipe.isFavorite">
-							<button class="floatButton btn-sm delete" data-toggle="tooltip" title="Remove From Menu" role="button" ng-click="removeFromMenu(recipe, recipe.id)"><i class="fa fa-trash-o fa-sm" aria-hidden="true"></i></button>
-							<button class="floatButton btn-sm toFavorite" role="button" data-toggle="tooltip" title="Save as Favorite" ng-click="saveFavorite(recipe, recipe.id, false)"><i class="fa fa-thumbs-up" aria-hidden="true"></i></button>
-							<button class="floatButton btn-sm detail" data-toggle="tooltip" title="See Details" role="button"><i class="fa fa-info-circle toDetails"  ng-click="viewLink(recipe.recipeURL)" aria-hidden="true"></i></button>
-							</div> -->
 		          </div>
 	            
 	        </div>

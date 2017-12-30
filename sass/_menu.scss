@@ -49,6 +49,7 @@
 .scroll {
 		height: 150px;
 		overflow: scroll;
+		margin-bottom: 5px;
 }
 
 .ingredientHolder { 
@@ -90,10 +91,18 @@
 
 .menuCardHeight {
 	height: 250px;
-	
+	margin-bottom: 15px;
+	background-color: $thumbnail;
+	border: 1px solid lightgrey;
+	-webkit-box-shadow: 3px 3px 13px -3px rgba(102,102,102,0.37);
+	-moz-box-shadow: 3px 3px 13px -3px rgba(102,102,102,0.37);
+	box-shadow: 3px 3px 13px -3px rgba(102,102,102,0.37);
 }
 
 .menuButtonWrapper {
-	position: relative;
+	position: absolute;
+	right:    0;
+	bottom:   0;
+	margin-bottom: 20px;
 }
 
