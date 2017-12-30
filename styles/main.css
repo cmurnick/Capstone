@@ -56,7 +56,7 @@ body {
   margin: 30px;
   text-align: center; }
   .lgDeleteButton .lgButton {
-    background-color: #C3FB94;
+    background-color: #C0EC5E;
     color: #898888;
     -webkit-box-shadow: 3px 3px 13px -2px #666666;
     -moz-box-shadow: 3px 3px 13px -2px #666666;
@@ -84,7 +84,7 @@ body {
   content: ""; }
 
 .floatButton {
-  background-color: #C3FB94;
+  background-color: #C0EC5E;
   color: #898888;
   margin: 2px;
   -webkit-box-shadow: 3px 3px 13px -2px #666666;
@@ -118,12 +118,15 @@ body {
   border-bottom: 1px solid black; }
 
 .home {
-  background-image: url("../images/carrotcrop.jpg");
+  background-image: url("../images/buried.jpg");
   background-size: cover;
   margin-top: -10px;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  height: 1500px; }
+  height: 1500px;
+  -webkit-box-shadow: 2px 2px 7px 0px #878787;
+  -moz-box-shadow: 2px 2px 7px 0px #878787;
+  box-shadow: 2px 2px 7px 0px #878787; }
 
 .groceryHeader {
   text-align: center; }
