@@ -1,13 +1,8 @@
-.topForm {
-    margin-top: 100px;
-}
-
 textarea {
     margin-bottom: 10px;
     height: 300px;
     border-radius: 5px;
-    border-color: white;
-    
+    border-color: white;  
 }
 
 .commentBackgroundDiv {
@@ -16,7 +11,6 @@ textarea {
     margin-top: 60px;
     margin-bottom: 60px;
     border-radius: 10px;
-    // background-attachment: fixed;
     background-repeat: no-repeat;
     height: 600px;
     -webkit-box-shadow: 6px 6px 5px 0px rgba(153,153,153,1);
@@ -29,4 +23,7 @@ textarea {
     font-size: 20px;
     font-weight: normal;
     text-align: center;
+    margin-top: 100px;
+    text-shadow: 0 1px 1px rgba(0, 0,0, .8);
+
 }
