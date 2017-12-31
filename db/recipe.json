@@ -3,61 +3,67 @@
 	
 			"recipe0": {
 				"label": "Baked Kale Chips",
-				"recipeURL": "https://smittenkitchen.com/2010/03/baked-kale-chips/",
+				"url": "https://smittenkitchen.com/2010/03/baked-kale-chips/",
 				"image": "https://www.edamam.com/web-img/d46/d4657664489f0474efe21f2496a3bdd4",
-				"isFavorite": true,
+				"isFavorite": false,
 				"onMenu": false,
 				"uid": "r6e8FDsXZWcKQOW0aroHO1oh5uf2",
-				"comments": ""
+				"comments": "",
+				"wannaTry": true
 			},
 			"recipe1": {
 				"label": "Vegetables Stir-fry Recipe",
-				"recipeURL": "http://www.grouprecipes.com/89350/vegetables-stir-fry.html",
+				"url": "http://www.grouprecipes.com/89350/vegetables-stir-fry.html",
 				"image": "https://www.edamam.com/web-img/5d6/5d689e93b9b3a82c542ee5358a5c3564.JPG",
 				"isFavorite": true,
-				"onMenu": false,
+				"onMenu": true,
 				"uid": "r6e8FDsXZWcKQOW0aroHO1oh5uf2",
-				"comments": ""
+				"comments": "",
+				"wannaTry": false
 
 			},
 			"recipe2": {
 				"label": "Cauliflower Popcorn",
-				"recipeURL": "https://food52.com/recipes/10620-cauliflower-popcorn",
+				"url": "https://food52.com/recipes/10620-cauliflower-popcorn",
 				"image": "https://www.edamam.com/web-img/22d/22d8e8d717ba82c451cb970e203d802a.jpg",
-				"isFavorite": true,
-				"onMenu": true,
+				"isFavorite": false,
+				"onMenu": false,
 				"uid": "r6e8FDsXZWcKQOW0aroHO1oh5uf2",
-				"comments": ""
+				"comments": "",
+				"wannaTry": true
 
 			},
 			"recipe3": {
 				"label": "Savory Pear Stuffing",
-				"recipeURL": "http://www.goodhousekeeping.com/food-recipes/a8333/savory-pear-stuffing-ghk1107/",
+				"url": "http://www.goodhousekeeping.com/food-recipes/a8333/savory-pear-stuffing-ghk1107/",
 				"image": "https://www.edamam.com/web-img/96f/96f6255a3674abef7fa9b3a362023594.jpg",
 				"isFavorite": true,
-				"onMenu": false,
+				"onMenu": true,
 				"uid": "r6e8FDsXZWcKQOW0aroHO1oh5uf2",
-				"comments": ""
+				"comments": "",
+				"wannaTry": false
 
 			},
 			"recipe4": {
 				"label": "Baked Apples with Cinnamon",
-				"recipeURL": "http://www.pbs.org/food/recipes/baked-apples-with-cinnamon/",
+				"url": "http://www.pbs.org/food/recipes/baked-apples-with-cinnamon/",
 				"image": "https://www.edamam.com/web-img/204/20494d9a029499221f6105697dd54667.jpg",
 				"isFavorite": true,
 				"onMenu": true,
 				"uid": "r6e8FDsXZWcKQOW0aroHO1oh5uf2",
-				"comments": ""
+				"comments": "",
+				"wannaTry": false
 
 			},
 			"recipe5": {
 				"label": "Maple Grilled Tempeh Recipe",
-				"recipeURL": "http://www.101cookbooks.com/archives/maple-grilled-tempeh-recipe.html",
+				"url": "http://www.101cookbooks.com/archives/maple-grilled-tempeh-recipe.html",
 				"image": "https://www.edamam.com/web-img/2b0/2b096abd705085aca2e5f0d35fbebf0c.jpg",
 				"isFavorite": false,
-				"onMenu": true,
+				"onMenu": false,
 				"uid": "r6e8FDsXZWcKQOW0aroHO1oh5uf2",
-				"comments": ""
+				"comments": "",
+				"wannaTry": true
 
 			}
 		},

@@ -1,11 +1,11 @@
 <div>
   <div class="text-center" id="rated">
-    <h1 class="mainHeader">My Favorites</h1>
+    <h1 class="mainHeader">Saved Recipes</h1>
   </div>
 
   <div class="grid">
 
-    <div ng-repeat="recipe in recipes" class="col-xs-12 col-sm- col-md-4 col-lg-3 col-xl-2 recipe  grid-item">
+    <div ng-repeat="recipe in recipes" class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 recipe  grid-item">
       <div class="thumbnail withCommentHeight bottomStick outer">      	
         	
       		<img class="favImage" ng-src="{{recipe.image}}">
@@ -19,11 +19,11 @@
         </div>
 
           <div class="copyright text-center">
-            <button class="floatButton btn-sm delete text-center" data-toggle="tooltip" title="Delete" role="button" ng-click="deleteRecipe(recipe.id)"><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i></button>
+            <button class="floatButton btn btn-sm delete text-center" data-toggle="tooltip" title="Delete" role="button" ng-click="deleteRecipe(recipe.id)"><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i></button>
             
-             <button class="floatButton btn-sm detail" ng-click="viewLink(recipe.recipeURL)"  data-toggle="tooltip" title="See Details" role="button"><i class="fa fa-info-circle toDetails fa-lg"  aria-hidden="true"></i></button>
+             <button class="floatButton btn btn-sm detail" ng-click="viewLink(recipe.url)"  data-toggle="tooltip" title="See Details" role="button"><i class="fa fa-info-circle toDetails fa-lg"  aria-hidden="true"></i></button>
              
-         		<button class="floatButton btn-sm menu" ng-click="addToMenu(recipe)" data-toggle="tooltip" title="Add to Menu" role="button"><i class="fa fa-cutlery fa-lg"  aria-hidden="true"></i></button>
+         		<button class="floatButton btn btn-sm menu" ng-click="addToMenu(recipe)" data-toggle="tooltip" title="Add to Menu" role="button"><i class="fa fa-cutlery fa-lg"  aria-hidden="true"></i></button>
           </div>
           
      </div>

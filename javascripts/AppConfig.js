@@ -84,6 +84,11 @@ app.config(function($routeProvider) {
       controller: 'FavCommentCtrl',
       resolve: {isAuth}
     })
+    .when("/wannaTry", {
+      templateUrl: 'partials/recipes/wannaTry.html',
+      controller: 'WannaTryCtrl',
+      resolve: {isAuth}
+    })
 		.otherwise('/auth');
 });
 
