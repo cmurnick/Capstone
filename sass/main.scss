@@ -5,6 +5,7 @@
 @import "grocery";
 @import "nav";
 @import "search";
+@import "favComment";
 
 
 .thumbnail {
@@ -21,11 +22,13 @@ box-shadow: 3px 3px 13px -3px rgba(102,102,102,0.37);
 .bottomStick {
 	margin-top: 25px;
 	padding-bottom: 7px;
+	
 }
 
 
 .cardHeight {
 	height: 350px;
+	max-width: 286px;
 	// position: -webkit-sticky;  // required for Safari
     // position: sticky;
  

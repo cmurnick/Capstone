@@ -1,12 +1,15 @@
 .withCommentHeight {
-  height: 360px; }
+  height: 390px;
+  max-width: 220px;
+  padding: -5px; }
 
 .copyright {
   position: absolute;
   bottom: 5px;
   width: 100%;
   align-content: center;
-  margin-left: -5px; }
+  margin-left: -5px;
+  margin-top: 5px; }
 
 .outer {
   position: relative; }
@@ -45,13 +48,17 @@ body {
 
 .mainHeader {
   margin-bottom: 30px;
-  margin-top: 10px;
+  margin-top: 30px;
   color: #898888; }
 
 .title {
   font-size: 16px;
   font-weight: bolder;
-  margin-top: 10px; }
+  margin-top: 10px;
+  margin-bottom: 4px; }
+
+.favImage {
+  max-width: 256px; }
 
 .menuButtonWrapper {
   display: flex;
@@ -96,7 +103,8 @@ body {
 
 .scroll {
   height: 150px;
-  overflow: scroll; }
+  overflow: scroll;
+  margin-bottom: 5px; }
 
 .ingredientHolder {
   list-style: none;
@@ -124,10 +132,19 @@ body {
   box-shadow: 3px 3px 13px -2px #666666; }
 
 .menuCardHeight {
-  height: 250px; }
+  height: 250px;
+  margin-bottom: 15px;
+  background-color: #f6f6f6;
+  border: 1px solid lightgrey;
+  -webkit-box-shadow: 3px 3px 13px -3px rgba(102, 102, 102, 0.37);
+  -moz-box-shadow: 3px 3px 13px -3px rgba(102, 102, 102, 0.37);
+  box-shadow: 3px 3px 13px -3px rgba(102, 102, 102, 0.37); }
 
 .menuButtonWrapper {
-  position: relative; }
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 20px; }
 
 .yellowList {
   background-color: #F9F6B3;
@@ -183,13 +200,39 @@ body {
   background-size: contain;
   width: 100%;
   height: 400px;
-  margin-top: 100px;
+  margin-top: 150px;
   margin-left: 40px; }
 
 .veganHolder {
   -webkit-box-shadow: 6px 6px 31px -11px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 6px 6px 31px -11px rgba(0, 0, 0, 0.75);
   box-shadow: 6px 6px 31px -11px rgba(0, 0, 0, 0.75); }
+
+textarea {
+  margin-bottom: 10px;
+  height: 300px;
+  border-radius: 5px;
+  border-color: white; }
+
+.commentBackgroundDiv {
+  background-image: url("../images/garden.jpg");
+  background-size: cover;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  height: 600px;
+  -webkit-box-shadow: 6px 6px 5px 0px #999999;
+  -moz-box-shadow: 6px 6px 5px 0px #999999;
+  box-shadow: 6px 6px 5px 0px #999999; }
+
+.commentLabel {
+  color: white;
+  font-size: 20px;
+  font-weight: normal;
+  text-align: center;
+  margin-top: 100px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8); }
 
 .thumbnail {
   background-color: #f6f6f6;
@@ -202,4 +245,5 @@ body {
   padding-bottom: 7px; }
 
 .cardHeight {
-  height: 350px; }
+  height: 350px;
+  max-width: 286px; }

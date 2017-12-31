@@ -1,5 +1,7 @@
 .withCommentHeight {
-    height: 360px;
+    height: 390px;
+    max-width: 220px;
+    padding: -5px;
 }
 
 .copyright {
@@ -9,6 +11,7 @@
     align-content: center;   
     // margin: 0;
     margin-left: -5px;
+    margin-top: 5px;
 }
 
 .outer {
@@ -49,5 +52,4 @@
 
 .actualComment {
     font-size: 9px;
- 
 }
