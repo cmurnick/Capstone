@@ -146,6 +146,9 @@ body {
   bottom: 0;
   margin-bottom: 20px; }
 
+.MenuFavorite {
+  margin-left: 5px; }
+
 .yellowList {
   background-color: #F9F6B3;
   border-radius: 10px;

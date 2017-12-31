@@ -90,17 +90,16 @@ app.controller("MenuCtrl", function($rootScope, $scope, $window, AuthService, To
 				getRecipes();	
 };
 
-	$scope.saveFavorite = (recipe, recipeId) => {
-		recipe.isFavorite = true;
-		let updatedRecipe = RecipeService.createRecipeObject(recipe);
-		RecipeService.updateRecipe(updatedRecipe, recipeId).then((result) => {
-			getRecipes();
-			ToastService.toast("Added to Favorite");
-		}).catch((err) => {
-			console.log("error in update movie", err);
-		});
-	};
 
+	$scope.switchFavorite = (recipe, isFavorited) => {
+		recipe.isFavorite = isFavorited;
+		let updatedRecipe = RecipeService.createRecipeObject(recipe);
+		RecipeService.updateRecipe(updatedRecipe, recipe.id).then((result) => {
+			getRecipes();
+		}).catch((err) => {
+			console.log("error in switch fav in menu", err);
+		});	
+	};
 
 
 	$scope.viewLink = (url) =>{
