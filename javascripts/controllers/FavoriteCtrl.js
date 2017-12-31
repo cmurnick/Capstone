@@ -32,7 +32,9 @@ app.controller("FavoriteCtrl", function ($location, $rootScope, $scope, $window,
 				ingredients.forEach((ingredient) => {
 					IngredientService.deleteIngredient(ingredient.id);
 				});
+			
 			});
+		
 		}).catch((err) => {
 			console.log("error in DeleteRecipe", err);
 		});

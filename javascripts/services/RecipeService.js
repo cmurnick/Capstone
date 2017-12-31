@@ -41,16 +41,37 @@ app.service("RecipeService", function($http, $q, FIREBASE_CONFIG) {
 			 });
 	};
 
+		const getWannaTryRecipes= (userUid) => {
+			let recipes = [];
+			return $q((resolve, reject) => {
+				$http.get(`${FIREBASE_CONFIG.databaseURL}/recipes.json?orderBy="uid"&equalTo="${userUid}"`).then((results) => {
+					let fbRecipes = results.data;
+
+					Object.keys(fbRecipes).forEach((key) => {
+					fbRecipes[key].id = key; 
+					if(fbRecipes[key].wannaTry){
+					recipes.push(fbRecipes[key]);
+					}
+					resolve(recipes);
+					});
+				}).catch((err) => {
+					reject(err);
+					console.log("getFavoriteRecipes", err);
+			});
+			});
+	};
 		const createRecipeObject= (recipe) => {
 			console.log("recipe", recipe);
 			return {
 				"label": recipe.label,
-				"recipeURL": recipe.url,
+				"url": recipe.url,
 				"image": recipe.image,
 				"isFavorite": recipe.isFavorite,
 				"onMenu": recipe.onMenu,
 				"uid": recipe.uid,
-				"comments": recipe.comments
+				"comments": recipe.comments,
+				"wannaTry": recipe.wannaTry
+
 				};
 			};
 
@@ -71,7 +92,7 @@ app.service("RecipeService", function($http, $q, FIREBASE_CONFIG) {
 			return $http.get(`${FIREBASE_CONFIG.databaseURL}/recipes/${recipeId}.json`);
 	};
 
-		return {getFavoriteRecipes, createRecipeObject, postNewRecipe, getOnMenu, updateRecipe, deleteRecipe, getSingleRecipe};
+		return {getFavoriteRecipes, createRecipeObject, postNewRecipe, getOnMenu, updateRecipe, deleteRecipe, getSingleRecipe, getWannaTryRecipes};
 });
 
 
