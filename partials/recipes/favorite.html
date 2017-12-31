@@ -5,18 +5,18 @@
 
   <div class="grid">
 
-    <div ng-repeat="recipe in recipes" class="col-xs-8 col-sm-5 col-md-4 col-lg-3 recipe  grid-item">
+    <div ng-repeat="recipe in recipes" class="col-xs-12 col-sm- col-md-4 col-lg-3 col-xl-2 recipe  grid-item">
       <div class="thumbnail withCommentHeight bottomStick outer">      	
         	
       		<img class="favImage" ng-src="{{recipe.image}}">
           <h1 class="title text-center">{{recipe.label}}</h1>
           <div class="commentArea">
-              <div class="headerAndEdit">
-                <p class="commentHeader">Comments</p>
-                <i class="editButton fa fa-pencil-square-o" data-toggle="tooltip" title="Edit Comment" ng-click="editComment(recipe.id)" aria-hidden="true"></i>
-              </div>
-              <div class="actualComment">{{recipe.comments}}</div>
-          </div>
+            <div class="headerAndEdit">
+              <p class="commentHeader">Comments</p>
+              <i class="editButton fa fa-pencil-square-o" data-toggle="tooltip" title="Edit Comment" ng-click="editComment(recipe.id)" aria-hidden="true"></i>
+            </div>
+            <div class="actualComment">{{recipe.comments}}</div>
+        </div>
 
           <div class="copyright text-center">
             <button class="floatButton btn-sm delete text-center" data-toggle="tooltip" title="Delete" role="button" ng-click="deleteRecipe(recipe.id)"><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i></button>
@@ -25,6 +25,7 @@
              
          		<button class="floatButton btn-sm menu" ng-click="addToMenu(recipe)" data-toggle="tooltip" title="Add to Menu" role="button"><i class="fa fa-cutlery fa-lg"  aria-hidden="true"></i></button>
           </div>
+          
      </div>
     </div>
    </div>
