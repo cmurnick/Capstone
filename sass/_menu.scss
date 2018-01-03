@@ -91,7 +91,7 @@
 	}
 
 .menuCardHeight {
-	height: 250px;
+	height: 310px;
 	margin-bottom: 15px;
 	background-color: $thumbnail;
 	border: 1px solid lightgrey;
@@ -109,4 +109,26 @@
 
 .MenuFavorite {
 	margin-left: 5px;
+}
+ //The Comment area that shows up when a recipe is a favorite and has comments from the saved page
+.menuCommentArea {
+	border: 1px solid lightgray;
+	font-size: 12px;
+    border-radius: 5px;
+    padding: 5px;
+	background-color: white;
+	min-height: 0px;
+    max-height: 50px;
+	margin: 5px; 
+    overflow-x: hidden;
+    overflow: scroll;  
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(137,136,136,0.47);
+    -moz-box-shadow: 1px 1px 5px 0px rgba(137,136,136,0.47);
+    box-shadow: 1px 1px 5px 0px rgba(137,136,136,0.47); 
+}
+
+.commentonMenuPage {
+	margin-bottom: 0;
+	margin-left: 5px;
+	font-size: 11px
 }
