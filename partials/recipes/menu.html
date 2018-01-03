@@ -8,27 +8,22 @@
  	</div>
 
 	<div class="menuWrap">
-	    <!-- <div class="row"> -->
 	      <div ng-repeat="recipe in recipes" class="col-sm-12 col-md-6 recipe">
 	        <div class="menuCardHeight ">
-				<!-- thumbnail -->
 	            <div class="imageHeader"><img class="groceryImage" ng-src="{{recipe.image}}">
 	                <h1 class="groceryTitle">{{recipe.label}}</h1>
 	            </div>
-		            <div>
+		            <div class="scrollyPart">
 						<div class="scroll">
 			            <ul ng-repeat="i in recipe.ingredients" class="ingredientHolder">
 			                  <li class="groceryIngredient">{{i.ingredient}}</li>
 						</ul>
 						</div>
-						<!-- < ng-if="!recipe.isFavorite">
-								<i class="fa fa-star-o fa-lg" aria-hidden="true" ng-click="switchFavorite(recipe, true)"></i>
-							  </p>
-							<p ng-if="recipe.isFavorite">
-								<i class="fa fa-star fa-lg" aria-hidden="true" ng-click="switchFavorite(recipe, false)"></i>
-							</p> -->
-
-
+	
+						<div ng-if="recipe.isFavorite" ng-show="recipe.comments">
+							<h6 class="commentonMenuPage" >Comments:</h6>
+							<div class="menuCommentArea" >{{recipe.comments}}</div>
+						</div>
 
 
 					<div class="menuButtonWrapper">
@@ -48,7 +43,7 @@
 	            
 	        </div>
 	      </div>
-	 <!--    </div> -->
+
 	  </div>
 </div>
 
