@@ -205,7 +205,11 @@ body {
   box-shadow: 2px 2px 7px 0px #878787; }
 
 .groceryHeader {
-  text-align: center; }
+  text-align: center;
+  font-size: 38px;
+  font-family: 'Pacifico', cursive;
+  color: #898888;
+  margin-bottom: 15px; }
 
 .tomato {
   max-height: auto;
@@ -235,6 +239,12 @@ body {
   -webkit-box-shadow: 6px 6px 31px -11px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 6px 6px 31px -11px rgba(0, 0, 0, 0.75);
   box-shadow: 6px 6px 31px -11px rgba(0, 0, 0, 0.75); }
+
+.searchRecipes {
+  font-size: 38px;
+  font-family: 'Pacifico', cursive;
+  color: #898888;
+  margin-bottom: 15px; }
 
 textarea {
   margin-bottom: 10px;
