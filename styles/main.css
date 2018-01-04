@@ -148,7 +148,7 @@ body {
   position: absolute;
   right: 0;
   bottom: 0;
-  margin-bottom: 20px; }
+  margin-bottom: 25px; }
 
 .MenuFavorite {
   margin-left: 5px; }
@@ -160,7 +160,7 @@ body {
   padding: 5px;
   background-color: white;
   min-height: 0px;
-  max-height: 60px;
+  max-height: 63px;
   margin: 5px;
   overflow-x: hidden;
   overflow: scroll;
