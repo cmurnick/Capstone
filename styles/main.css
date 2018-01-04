@@ -136,7 +136,7 @@ body {
   box-shadow: 3px 3px 13px -2px #666666; }
 
 .menuCardHeight {
-  height: 310px;
+  height: 325px;
   margin-bottom: 15px;
   background-color: #f6f6f6;
   border: 1px solid lightgrey;
@@ -160,7 +160,7 @@ body {
   padding: 5px;
   background-color: white;
   min-height: 0px;
-  max-height: 50px;
+  max-height: 60px;
   margin: 5px;
   overflow-x: hidden;
   overflow: scroll;
