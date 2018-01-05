@@ -23,7 +23,7 @@ app.controller("WannaTryCtrl", function($rootScope, $scope, $window, AuthService
 		let updatedRecipe = RecipeService.createRecipeObject(recipe);
 		RecipeService.updateRecipe(updatedRecipe, recipeId).then((result) => {
 			getRecipes();
-			ToastService.toast("Added to Favorite");
+			ToastService.toast("Added to Favorites");
 		}).catch((err) => {
 			console.log("error in update movie", err);
 		});

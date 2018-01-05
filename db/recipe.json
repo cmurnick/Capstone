@@ -16,9 +16,9 @@
 				"url": "http://www.grouprecipes.com/89350/vegetables-stir-fry.html",
 				"image": "https://www.edamam.com/web-img/5d6/5d689e93b9b3a82c542ee5358a5c3564.JPG",
 				"isFavorite": true,
-				"onMenu": true,
+				"onMenu": false,
 				"uid": "r6e8FDsXZWcKQOW0aroHO1oh5uf2",
-				"comments": "",
+				"comments": "Be sure to add extra vegetables and serve with brown rice",
 				"wannaTry": false
 
 			},
@@ -38,7 +38,7 @@
 				"url": "http://www.goodhousekeeping.com/food-recipes/a8333/savory-pear-stuffing-ghk1107/",
 				"image": "https://www.edamam.com/web-img/96f/96f6255a3674abef7fa9b3a362023594.jpg",
 				"isFavorite": true,
-				"onMenu": true,
+				"onMenu": false,
 				"uid": "r6e8FDsXZWcKQOW0aroHO1oh5uf2",
 				"comments": "",
 				"wannaTry": false
@@ -49,9 +49,9 @@
 				"url": "http://www.pbs.org/food/recipes/baked-apples-with-cinnamon/",
 				"image": "https://www.edamam.com/web-img/204/20494d9a029499221f6105697dd54667.jpg",
 				"isFavorite": true,
-				"onMenu": true,
+				"onMenu": false,
 				"uid": "r6e8FDsXZWcKQOW0aroHO1oh5uf2",
-				"comments": "",
+				"comments": "Double the guts of this recipe so the apples have a lot of sauce on them and they aren't dry",
 				"wannaTry": false
 
 			},
